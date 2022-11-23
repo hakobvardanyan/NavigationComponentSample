@@ -7,12 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.hakvardanyan.navigationsample.databinding.FragmentRegisterBinding
-import kotlin.random.Random
 
 class RegisterFragment : Fragment() {
 
     private var binding: FragmentRegisterBinding? = null
-    private val randomInt = Random.nextInt(100)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -29,7 +27,7 @@ class RegisterFragment : Fragment() {
             description.text = name?.plus(" $age")
 
             buttonNavigateToLogin.setOnClickListener {
-                findNavController().navigate(R.id.loginFragment)
+                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
         }
     }

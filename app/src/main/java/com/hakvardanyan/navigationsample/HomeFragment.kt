@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
             }
 
             buttonNavigateToRegister.setOnClickListener {
-                findNavController().navigate(R.id.registerFragment)
+                findNavController().navigate(R.id.action_homeFragment_to_registerFragment)
             }
         }
     }
