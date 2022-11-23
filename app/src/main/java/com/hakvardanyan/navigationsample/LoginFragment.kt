@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import com.hakvardanyan.navigationsample.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -20,8 +21,22 @@ class LoginFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding?.buttonNavigateToHome?.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        binding?.apply {
+
+            buttonNavigateToHome.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_homeFragment, null, navOptions {
+                    anim {
+                        enter = R.anim.slide_in_right
+                        exit = R.anim.slide_out_left
+                        popEnter = R.anim.slide_in_left
+                        popExit = R.anim.slide_out_right
+                    }
+                    popUpTo(R.id.auth_navigation)
+                })
+            }
+            buttonNavigateToForgotPassword.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+            }
         }
     }
 
