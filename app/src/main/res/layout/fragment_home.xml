@@ -56,10 +56,50 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:text="Navigate to Register"
         android:layout_marginTop="16dp"
+        android:text="Navigate to Register"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_navigate_back_to_root" />
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/inbox_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="16dp"
+            android:src="@drawable/ic_inbox" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/outbox_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="16dp"
+            android:src="@drawable/ic_outbox" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/airplane_ticket_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="16dp"
+            android:src="@drawable/ic_airplane_ticket" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/discount_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingVertical="16dp"
+            android:src="@drawable/ic_discount" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
