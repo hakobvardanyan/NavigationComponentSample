@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.hakvardanyan.navigationsample.RegisterFragment"
+        android:name="com.hakvardanyan.navigationsample.auth.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register">
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.hakvardanyan.navigationsample.LoginFragment"
+        android:name="com.hakvardanyan.navigationsample.auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.hakvardanyan.navigationsample.ForgotPasswordFragment"
+        android:name="com.hakvardanyan.navigationsample.auth.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password">
         <action

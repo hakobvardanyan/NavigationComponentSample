@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample
+package com.hakvardanyan.navigationsample.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
+import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
