@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outbox_navigation"
+    app:startDestination="@id/outboxFragment">
+
+    <fragment
+        android:id="@+id/outboxFragment"
+        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragment"
+        android:label="fragment_outbox"
+        tools:layout="@layout/fragment_outbox">
+        <action
+            android:id="@+id/action_outboxFragment_to_outboxFragmentChild1"
+            app:destination="@id/outboxFragmentChild1" />
+    </fragment>
+    <fragment
+        android:id="@+id/outboxFragmentChild1"
+        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragmentChild1"
+        android:label="OutboxFragmentChild1"
+        tools:layout="@layout/fragment_outbox_child1">
+        <action
+            android:id="@+id/action_outboxFragmentChild1_to_outboxFragmentChild2"
+            app:destination="@id/outboxFragmentChild2" />
+    </fragment>
+    <fragment
+        android:id="@+id/outboxFragmentChild2"
+        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragmentChild2"
+        android:label="OutboxFragmentChild2"
+        tools:layout="@layout/fragment_outbox_child2">
+        <action
+            android:id="@+id/action_outboxFragmentChild2_to_outboxFragmentChild3"
+            app:destination="@id/outboxFragmentChild3" />
+    </fragment>
+    <fragment
+        android:id="@+id/outboxFragmentChild3"
+        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragmentChild3"
+        android:label="OutboxFragmentChild3"
+        tools:layout="@layout/fragment_outbox_child3" />
+</navigation>
