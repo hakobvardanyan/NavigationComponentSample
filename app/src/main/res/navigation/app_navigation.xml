@@ -15,6 +15,8 @@
         <action
             android:id="@+id/action_splashFragment_to_registerFragment"
             app:destination="@id/auth_navigation"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
