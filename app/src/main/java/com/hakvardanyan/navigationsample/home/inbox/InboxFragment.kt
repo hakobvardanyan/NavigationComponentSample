@@ -2,6 +2,7 @@ package com.hakvardanyan.navigationsample.home.inbox
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hakvardanyan.navigationsample.databinding.FragmentInboxBinding
@@ -16,6 +17,10 @@ class InboxFragment : Fragment() {
     ) = FragmentInboxBinding.inflate(inflater, container, false).run {
         binding = this
         root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
     }
 
     override fun onDestroyView() {

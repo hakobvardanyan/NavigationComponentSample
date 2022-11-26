@@ -3,11 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.inbox.InboxFragment">
+    tools:context=".home.inbox.InboxFragmentChild1">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="Inbox Child Fragment 1" />
+
+    <Button
+        android:id="@+id/button_navigate_to_inbox_child2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="Navigate to Inbox Child 2"
+        android:textAllCaps="false" />
 </FrameLayout>

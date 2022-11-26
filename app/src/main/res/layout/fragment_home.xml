@@ -26,9 +26,12 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nested_home_container"
+        android:id="@+id/nested_home_navigation_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:navGraph="@navigation/home_navigation"
+        android:background="@android:color/holo_red_dark"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 

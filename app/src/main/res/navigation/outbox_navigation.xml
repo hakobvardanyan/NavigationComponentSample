@@ -3,17 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/outbox_navigation"
-    app:startDestination="@id/outboxFragment">
+    app:startDestination="@id/outboxFragmentChild1">
 
-    <fragment
-        android:id="@+id/outboxFragment"
-        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragment"
-        android:label="fragment_outbox"
-        tools:layout="@layout/fragment_outbox">
-        <action
-            android:id="@+id/action_outboxFragment_to_outboxFragmentChild1"
-            app:destination="@id/outboxFragmentChild1" />
-    </fragment>
     <fragment
         android:id="@+id/outboxFragmentChild1"
         android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragmentChild1"

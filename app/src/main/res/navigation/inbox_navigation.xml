@@ -3,22 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/inbox_navigation"
-    app:startDestination="@id/inboxFragment">
+    app:startDestination="@id/inboxFragmentChild1">
 
-    <fragment
-        android:id="@+id/inboxFragment"
-        android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragment"
-        android:label="fragment_inbox"
-        tools:layout="@layout/fragment_inbox" >
-        <action
-            android:id="@+id/action_inboxFragment_to_inboxFragmentChild1"
-            app:destination="@id/inboxFragmentChild1" />
-    </fragment>
     <fragment
         android:id="@+id/inboxFragmentChild1"
         android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragmentChild1"
         android:label="InboxFragmentChild1"
-        tools:layout="@layout/fragment_inbox_child1" >
+        tools:layout="@layout/fragment_inbox_child1">
         <action
             android:id="@+id/action_inboxFragmentChild1_to_inboxFragmentChild2"
             app:destination="@id/inboxFragmentChild2" />
@@ -27,7 +18,7 @@
         android:id="@+id/inboxFragmentChild2"
         android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragmentChild2"
         android:label="InboxFragmentChild2"
-        tools:layout="@layout/fragment_inbox_child2" >
+        tools:layout="@layout/fragment_inbox_child2">
         <action
             android:id="@+id/action_inboxFragmentChild2_to_inboxFragmentChild3"
             app:destination="@id/inboxFragmentChild3" />

@@ -2,18 +2,9 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/discount_graph"
-    app:startDestination="@id/discountFragment">
+    android:id="@+id/discount_navigation"
+    app:startDestination="@id/discountFragmentChild1">
 
-    <fragment
-        android:id="@+id/discountFragment"
-        android:name="com.hakvardanyan.navigationsample.home.discount.DiscountFragment"
-        android:label="fragment_discount"
-        tools:layout="@layout/fragment_discount">
-        <action
-            android:id="@+id/action_discountFragment_to_discountFragmentChild1"
-            app:destination="@id/discountFragmentChild1" />
-    </fragment>
     <fragment
         android:id="@+id/discountFragmentChild1"
         android:name="com.hakvardanyan.navigationsample.home.discount.DiscountFragmentChild1"

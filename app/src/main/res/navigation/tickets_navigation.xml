@@ -3,22 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tickets_navigation"
-    app:startDestination="@id/ticketsFragment">
+    app:startDestination="@id/ticketsFragmentChild1">
 
-    <fragment
-        android:id="@+id/ticketsFragment"
-        android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragment"
-        android:label="fragment_tickets"
-        tools:layout="@layout/fragment_tickets" >
-        <action
-            android:id="@+id/action_ticketsFragment_to_ticketsFragmentChild1"
-            app:destination="@id/ticketsFragmentChild1" />
-    </fragment>
     <fragment
         android:id="@+id/ticketsFragmentChild1"
         android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragmentChild1"
         android:label="TicketsFragmentChild1"
-        tools:layout="@layout/fragment_tickets_child1" >
+        tools:layout="@layout/fragment_tickets_child1">
         <action
             android:id="@+id/action_ticketsFragmentChild1_to_ticketsFragmentChild2"
             app:destination="@id/ticketsFragmentChild2" />
@@ -27,7 +18,7 @@
         android:id="@+id/ticketsFragmentChild2"
         android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragmentChild2"
         android:label="TicketsFragmentChild2"
-        tools:layout="@layout/fragment_tickets_child2" >
+        tools:layout="@layout/fragment_tickets_child2">
         <action
             android:id="@+id/action_ticketsFragmentChild2_to_ticketsFragmentChild3"
             app:destination="@id/ticketsFragmentChild3" />
