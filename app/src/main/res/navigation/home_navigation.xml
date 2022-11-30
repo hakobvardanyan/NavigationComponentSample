@@ -3,29 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_navigation"
-    app:startDestination="@id/inboxFragment">
+    app:startDestination="@+id/outbox_navigation">
 
-    <fragment
-        android:id="@+id/inboxFragment"
-        android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragment"
-        android:label="InboxFragment"
-        tools:layout="@layout/fragment_inbox" />
+<!--    <action android:id="@+id/to_inbox_action"-->
+<!--        app:destination="@id/inbox_navigation"/>-->
 
-    <fragment
-        android:id="@+id/outboxFragment"
-        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragment"
-        android:label="OutboxFragment"
-        tools:layout="@layout/fragment_outbox" />
+<!--    <action android:id="@+id/to_outbox_action"-->
+<!--        app:destination="@id/outbox_navigation"/>-->
 
-    <fragment
-        android:id="@+id/ticketsFragment"
-        android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragment"
-        android:label="TicketsFragment"
-        tools:layout="@layout/fragment_tickets" />
+<!--    <action android:id="@+id/to_tickets_action"-->
+<!--        app:destination="@id/tickets_navigation"/>-->
 
-    <fragment
-        android:id="@+id/discountFragment"
-        android:name="com.hakvardanyan.navigationsample.home.discount.DiscountFragment"
-        android:label="DiscountFragment"
-        tools:layout="@layout/fragment_discount" />
+<!--    <action android:id="@+id/to_discount_action"-->
+<!--        app:destination="@id/discount_navigation"/>-->
+
+    <include app:graph="@navigation/inbox_navigation"/>
+    <include app:graph="@navigation/outbox_navigation"/>
+    <include app:graph="@navigation/tickets_navigation"/>
+    <include app:graph="@navigation/discount_navigation"/>
+
+<!--    <fragment-->
+<!--        android:id="@+id/inboxFragment"-->
+<!--        android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragment"-->
+<!--        android:label="InboxFragment"-->
+<!--        tools:layout="@layout/fragment_inbox" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/outboxFragment"-->
+<!--        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragment"-->
+<!--        android:label="OutboxFragment"-->
+<!--        tools:layout="@layout/fragment_outbox" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/ticketsFragment"-->
+<!--        android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragment"-->
+<!--        android:label="TicketsFragment"-->
+<!--        tools:layout="@layout/fragment_tickets" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/discountFragment"-->
+<!--        android:name="com.hakvardanyan.navigationsample.home.discount.DiscountFragment"-->
+<!--        android:label="DiscountFragment"-->
+<!--        tools:layout="@layout/fragment_discount" />-->
 </navigation>
