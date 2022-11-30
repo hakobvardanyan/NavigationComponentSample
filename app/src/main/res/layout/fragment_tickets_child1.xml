@@ -3,11 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.tickets.TicketsFragment">
+    tools:context=".home.tickets.TicketsFragmentChild1">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="Tickets Child Fragment 1" />
+
+    <Button
+        android:id="@+id/button_navigate_to_tickets_child2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="Navigate to Tickets Child 2"
+        android:textAllCaps="false" />
 </FrameLayout>

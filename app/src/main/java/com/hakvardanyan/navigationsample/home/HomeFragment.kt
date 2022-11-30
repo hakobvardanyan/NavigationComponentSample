@@ -36,21 +36,26 @@ class HomeFragment : Fragment() {
         })
     }
 
+    /**
+     * Handle back press in a custom way
+     * Check home graph, try possibility to use a Fragment that contain nav_host
+     */
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
             val navController = nestedHomeNavigationHost.getFragment<NavHostFragment>().navController
 
             inboxItem.setOnClickListener {
-                doOnClick(R.id.inbox_navigation, navController)
+                doOnClick(R.id.inboxFragment, navController)
             }
             outboxItem.setOnClickListener {
-                doOnClick(R.id.outbox_navigation, navController)
+                doOnClick(R.id.outboxFragment, navController)
             }
             airplaneTicketItem.setOnClickListener {
-                doOnClick(R.id.tickets_navigation, navController)
+                doOnClick(R.id.ticketsFragment, navController)
             }
             discountItem.setOnClickListener {
-                doOnClick(R.id.discount_navigation, navController)
+                doOnClick(R.id.discountFragment, navController)
             }
 
             addDestinationChangeListener(navController)
