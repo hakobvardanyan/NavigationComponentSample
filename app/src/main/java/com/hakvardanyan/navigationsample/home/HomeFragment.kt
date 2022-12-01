@@ -1,12 +1,15 @@
 package com.hakvardanyan.navigationsample.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
+import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.navOptions
@@ -25,9 +28,8 @@ class HomeFragment : Fragment() {
         root
     }
 
-
-    private fun doOnClick(menuItemId: Int, navController: NavController) {
-        navController.navigate(menuItemId, null, navOptions {
+    private fun navigateTo(destinationId: Int, navController: NavController) {
+        navController.navigate(destinationId, null, navOptions {
             launchSingleTop = true
             restoreState = true
             popUpTo(navController.graph.findStartDestination().id) {
@@ -37,8 +39,7 @@ class HomeFragment : Fragment() {
     }
 
     /**
-     * Handle back press in a custom way
-     * Check home graph, try possibility to use a Fragment that contain nav_host
+     * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
      */
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,20 +47,37 @@ class HomeFragment : Fragment() {
             val navController = nestedHomeNavigationHost.getFragment<NavHostFragment>().navController
 
             inboxItem.setOnClickListener {
-                doOnClick(R.id.inboxFragment, navController)
+                navigateTo(R.id.inboxFragment, navController)
             }
             outboxItem.setOnClickListener {
-                doOnClick(R.id.outboxFragment, navController)
+                navigateTo(R.id.outboxFragment, navController)
             }
             airplaneTicketItem.setOnClickListener {
-                doOnClick(R.id.ticketsFragment, navController)
+                navigateTo(R.id.ticketsFragment, navController)
             }
             discountItem.setOnClickListener {
-                doOnClick(R.id.discountFragment, navController)
+                navigateTo(R.id.discountFragment, navController)
             }
 
             addDestinationChangeListener(navController)
+            addOnBackPressedCallback(navController)
         }
+    }
+
+    private fun addOnBackPressedCallback(navController: NavController) {
+        activity?.onBackPressedDispatcher?.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(false) {
+                override fun handleOnBackPressed() {
+                    navController.run {
+                        val startDestinationId = graph.findStartDestination().id
+                        isEnabled = currentBackStackEntry?.destination?.id != startDestinationId
+                        if (isEnabled) {
+                            popBackStack(startDestinationId, false)
+                        }
+                    }
+                }
+            })
     }
 
     private fun addDestinationChangeListener(navController: NavController) {
@@ -74,11 +92,16 @@ class HomeFragment : Fragment() {
                         navController.removeOnDestinationChangedListener(this)
                         return
                     }
-    //                        v.menu.forEach { item ->
-    //                            if (destination.hierarchy.any { it.id == item.itemId }) {
-    //                                item.isChecked = true
-    //                            }
-    //                        }
+
+                    // TODO: Highlight correct bottom nav item
+                    destination.hierarchy.forEach {
+                        when (it.id) {
+                            R.id.inboxFragment -> Log.d("::::: ", "Inbox")
+                            R.id.outboxFragment -> Log.d("::::: ", "Outbox")
+                            R.id.ticketsFragment -> Log.d("::::: ", "Tickets")
+                            R.id.discountFragment -> Log.d("::::: ", "Discount")
+                        }
+                    }
                 }
             })
     }
