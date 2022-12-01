@@ -4,39 +4,21 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.navOptions
+import androidx.viewbinding.ViewBinding
+import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
-    private var binding: FragmentHomeBinding? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = FragmentHomeBinding.inflate(inflater, container, false).run {
-        binding = this
-        root
-    }
-
-    private fun navigateTo(destinationId: Int, navController: NavController) {
-        navController.navigate(destinationId, null, navOptions {
-            launchSingleTop = true
-            restoreState = true
-            popUpTo(navController.graph.findStartDestination().id) {
-                saveState = true
-            }
-        })
-    }
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentHomeBinding::inflate
 
     /**
      * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
@@ -62,6 +44,16 @@ class HomeFragment : Fragment() {
             addDestinationChangeListener(navController)
             addOnBackPressedCallback(navController)
         }
+    }
+
+    private fun navigateTo(destinationId: Int, navController: NavController) {
+        navController.navigate(destinationId, null, navOptions {
+            launchSingleTop = true
+            restoreState = true
+            popUpTo(navController.graph.findStartDestination().id) {
+                saveState = true
+            }
+        })
     }
 
     private fun addOnBackPressedCallback(navController: NavController) {
@@ -104,10 +96,5 @@ class HomeFragment : Fragment() {
                     }
                 }
             })
-    }
-
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
     }
 }

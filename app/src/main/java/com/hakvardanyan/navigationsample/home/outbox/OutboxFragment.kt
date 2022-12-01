@@ -3,24 +3,16 @@ package com.hakvardanyan.navigationsample.home.outbox
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.NavHostFragment
+import androidx.viewbinding.ViewBinding
+import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.databinding.FragmentOutboxBinding
 
-class OutboxFragment : Fragment() {
+class OutboxFragment : BaseFragment<FragmentOutboxBinding>() {
 
-    private var binding: FragmentOutboxBinding? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = FragmentOutboxBinding.inflate(inflater, container, false).run {
-        binding = this
-        root
-    }
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentOutboxBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
@@ -37,10 +29,5 @@ class OutboxFragment : Fragment() {
                 })
         }
 
-    }
-
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
     }
 }

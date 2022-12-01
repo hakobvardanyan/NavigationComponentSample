@@ -3,32 +3,19 @@ package com.hakvardanyan.navigationsample.auth
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.viewbinding.ViewBinding
+import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentForgotPasswordBinding
 
-class ForgotPasswordFragment : Fragment() {
+class ForgotPasswordFragment : BaseFragment<FragmentForgotPasswordBinding>() {
 
-    private var binding: FragmentForgotPasswordBinding? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = FragmentForgotPasswordBinding.inflate(inflater, container, false).run {
-        binding = this
-        root
-    }
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentForgotPasswordBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.buttonNavigateToRegister?.setOnClickListener {
             findNavController().popBackStack(R.id.registerFragment, false)
         }
-    }
-
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
     }
 }

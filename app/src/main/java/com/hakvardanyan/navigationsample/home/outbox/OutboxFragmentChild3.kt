@@ -1,25 +1,12 @@
 package com.hakvardanyan.navigationsample.home.outbox
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
+import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.databinding.FragmentOutboxChild3Binding
 
-class OutboxFragmentChild3 : Fragment() {
+class OutboxFragmentChild3 : BaseFragment<FragmentOutboxChild3Binding>() {
 
-    private var binding: FragmentOutboxChild3Binding? = null
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentOutboxChild3Binding::inflate
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = FragmentOutboxChild3Binding.inflate(inflater, container, false).run {
-        binding = this
-        root
-    }
-
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
-    }
 }

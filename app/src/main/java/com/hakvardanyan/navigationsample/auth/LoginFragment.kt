@@ -3,23 +3,16 @@ package com.hakvardanyan.navigationsample.auth
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
+import androidx.viewbinding.ViewBinding
+import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentLoginBinding
 
-class LoginFragment : Fragment() {
+class LoginFragment : BaseFragment<FragmentLoginBinding>() {
 
-    private var binding: FragmentLoginBinding? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ) = FragmentLoginBinding.inflate(inflater, container, false).run {
-        binding = this
-        root
-    }
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentLoginBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
@@ -39,10 +32,5 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
             }
         }
-    }
-
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
     }
 }

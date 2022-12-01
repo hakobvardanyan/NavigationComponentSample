@@ -1,25 +1,12 @@
 package com.hakvardanyan.navigationsample.home.tickets
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
+import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.databinding.FragmentTicketsBinding
 
-class TicketsFragment : Fragment() {
+class TicketsFragment : BaseFragment<FragmentTicketsBinding>() {
 
-    private var binding: FragmentTicketsBinding? = null
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentTicketsBinding::inflate
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = FragmentTicketsBinding.inflate(inflater, container, false).run {
-        binding = this
-        root
-    }
-
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
-    }
 }

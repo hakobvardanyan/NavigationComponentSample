@@ -1,25 +1,12 @@
 package com.hakvardanyan.navigationsample.home.inbox
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
+import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.databinding.FragmentInboxChild2Binding
 
-class InboxFragmentChild2 : Fragment() {
+class InboxFragmentChild2 : BaseFragment<FragmentInboxChild2Binding>() {
 
-    private var binding: FragmentInboxChild2Binding? = null
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentInboxChild2Binding::inflate
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = FragmentInboxChild2Binding.inflate(inflater, container, false).run {
-        binding = this
-        root
-    }
-
-    override fun onDestroyView() {
-        binding = null
-        super.onDestroyView()
-    }
 }
