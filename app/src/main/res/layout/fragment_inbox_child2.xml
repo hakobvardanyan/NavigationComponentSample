@@ -10,4 +10,13 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="Inbox Child Fragment 2" />
+
+    <Button
+        android:id="@+id/button_navigate_to_inbox_child3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="Navigate to Inbox Child 3"
+        android:textAllCaps="false" />
 </FrameLayout>

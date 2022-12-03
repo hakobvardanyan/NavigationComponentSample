@@ -20,8 +20,6 @@
         android:label="InboxFragmentChild2"
         tools:layout="@layout/fragment_inbox_child2">
         <action
-            app:popUpToSaveState="true"
-            app:restoreState="true"
             android:id="@+id/action_inboxFragmentChild2_to_inboxFragmentChild3"
             app:destination="@id/inboxFragmentChild3" />
     </fragment>
