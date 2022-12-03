@@ -30,8 +30,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         findNavController().getBackStackEntry(R.id.homeFragment)
     })
 
-//    private val homeGraphViewModel: HomeGraphViewModel by koinNavGraphViewModel(R.id.nested_home_navigation_host)
-
     /**
      * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
      * By second time clicking on menu item it must pop to nested start destination
@@ -67,11 +65,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     private fun navigateTo(destinationId: Int, navController: NavController) {
+        val shouldSaveAndRestoreState = navController.currentDestination?.id != destinationId
         navController.navigate(destinationId, null, navOptions {
             launchSingleTop = true
-            restoreState = true
+            restoreState = shouldSaveAndRestoreState
             popUpTo(navController.graph.findStartDestination().id) {
-                saveState = true
+                saveState = shouldSaveAndRestoreState
             }
         })
     }
