@@ -5,26 +5,46 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.OnBackPressedCallback
+import androidx.lifecycle.flowWithLifecycle
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentHomeBinding
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentHomeBinding::inflate
 
+    private val homeGraphViewModel: HomeGraphViewModel by viewModel(ownerProducer = {
+        findNavController().getBackStackEntry(R.id.homeFragment)
+    })
+
+//    private val homeGraphViewModel: HomeGraphViewModel by koinNavGraphViewModel(R.id.nested_home_navigation_host)
+
     /**
      * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
+     * By second time clicking on menu item it must pop to nested start destination
+     * implement Toolbar back button functionality
      */
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        homeGraphViewModel.testValue
+            .flowWithLifecycle(viewLifecycleOwner.lifecycle)
+            .onEach { Log.d(":::::: ", it) }
+            .launchIn(viewLifecycleOwner.lifecycleScope)
+
         binding?.apply {
             val navController = nestedHomeNavigationHost.getFragment<NavHostFragment>().navController
 
