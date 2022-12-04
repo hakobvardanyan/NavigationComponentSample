@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -29,6 +30,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private val homeGraphViewModel: HomeGraphViewModel by viewModel(ownerProducer = {
         findNavController().getBackStackEntry(R.id.homeFragment)
     })
+
+    private val iconHomeActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_home_filled) }
+    private val iconWalletActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_wallet_filled) }
+    private val iconAnalysisActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_analysis_filled) }
+    private val iconProfileActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_profile_filled) }
+
+    private val iconHomeInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_home) }
+    private val iconWalletInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_wallet) }
+    private val iconAnalysisInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_analysis) }
+    private val iconProfileInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_profile) }
 
     /**
      * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
@@ -99,20 +110,21 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     destination: NavDestination,
                     arguments: Bundle?
                 ) {
-                    if (binding?.bottomNavigationView == null) {
-                        navController.removeOnDestinationChangedListener(this)
-                        return
-                    }
+                    binding?.apply {
+                        inboxItem.setImageDrawable(iconHomeInactive)
+                        outboxItem.setImageDrawable(iconWalletInactive)
+                        airplaneTicketItem.setImageDrawable(iconAnalysisInactive)
+                        discountItem.setImageDrawable(iconProfileInactive)
 
-                    // TODO: Highlight correct bottom nav item
-                    destination.hierarchy.forEach {
-                        when (it.id) {
-                            R.id.inboxFragment -> Log.d("::::: ", "Inbox")
-                            R.id.outboxFragment -> Log.d("::::: ", "Outbox")
-                            R.id.ticketsFragment -> Log.d("::::: ", "Tickets")
-                            R.id.discountFragment -> Log.d("::::: ", "Discount")
+                        destination.hierarchy.forEach {
+                            when (it.id) {
+                                R.id.inboxFragment -> inboxItem.setImageDrawable(iconHomeActive)
+                                R.id.outboxFragment -> outboxItem.setImageDrawable(iconWalletActive)
+                                R.id.ticketsFragment -> airplaneTicketItem.setImageDrawable(iconAnalysisActive)
+                                R.id.discountFragment -> discountItem.setImageDrawable(iconProfileActive)
+                            }
                         }
-                    }
+                    } ?: navController.removeOnDestinationChangedListener(this)
                 }
             })
     }
