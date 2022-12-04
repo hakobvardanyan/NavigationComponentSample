@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.home.discount
+package com.hakvardanyan.navigationsample.main.discount
 
 import android.os.Bundle
 import android.view.LayoutInflater

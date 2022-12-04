@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/ticketsFragmentChild1"
-        android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragmentChild1"
+        android:name="com.hakvardanyan.navigationsample.main.tickets.TicketsFragmentChild1"
         android:label="TicketsFragmentChild1"
         tools:layout="@layout/fragment_tickets_child1">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/ticketsFragmentChild2"
-        android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragmentChild2"
+        android:name="com.hakvardanyan.navigationsample.main.tickets.TicketsFragmentChild2"
         android:label="TicketsFragmentChild2"
         tools:layout="@layout/fragment_tickets_child2">
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/ticketsFragmentChild3"
-        android:name="com.hakvardanyan.navigationsample.home.tickets.TicketsFragmentChild3"
+        android:name="com.hakvardanyan.navigationsample.main.tickets.TicketsFragmentChild3"
         android:label="TicketsFragmentChild3"
         tools:layout="@layout/fragment_tickets_child3" />
 </navigation>

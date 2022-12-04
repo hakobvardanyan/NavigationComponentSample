@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.home.outbox
+package com.hakvardanyan.navigationsample.main.outbox
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,7 +14,7 @@ import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentOutboxBinding
-import com.hakvardanyan.navigationsample.home.HomeGraphViewModel
+import com.hakvardanyan.navigationsample.main.MainGraphViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
 
@@ -23,8 +23,8 @@ class OutboxFragment : BaseFragment<FragmentOutboxBinding>() {
     override val bindingInitializer: (LayoutInflater) -> ViewBinding =
         FragmentOutboxBinding::inflate
 
-    private val homeGraphViewModel: HomeGraphViewModel by viewModel(ownerProducer = {
-        requireActivity().findNavController(R.id.app_nav_host_container).getBackStackEntry(R.id.homeFragment)
+    private val mainGraphViewModel: MainGraphViewModel by viewModel(ownerProducer = {
+        requireActivity().findNavController(R.id.app_nav_host_container).getBackStackEntry(R.id.mainFragment)
 //        findHomeFragment(parentFragment) ?: this
     })
 
@@ -51,7 +51,7 @@ class OutboxFragment : BaseFragment<FragmentOutboxBinding>() {
             addDestinationChangeListener(navController)
 
             sampleText.setOnClickListener {
-                homeGraphViewModel.submitValue(Random.nextDouble().toString())
+                mainGraphViewModel.submitValue(Random.nextDouble().toString())
             }
         }
     }

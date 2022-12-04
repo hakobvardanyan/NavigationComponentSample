@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.home.inbox
+package com.hakvardanyan.navigationsample.main.inbox
 
 import android.os.Bundle
 import android.view.LayoutInflater

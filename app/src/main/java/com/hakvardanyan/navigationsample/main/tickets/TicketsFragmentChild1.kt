@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.home.tickets
+package com.hakvardanyan.navigationsample.main.tickets
 
 import android.os.Bundle
 import android.view.LayoutInflater

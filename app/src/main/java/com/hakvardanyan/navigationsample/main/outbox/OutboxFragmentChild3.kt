@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.home.outbox
+package com.hakvardanyan.navigationsample.main.outbox
 
 import android.view.LayoutInflater
 import androidx.viewbinding.ViewBinding

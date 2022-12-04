@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.home
+package com.hakvardanyan.navigationsample.main
 
 import android.os.Bundle
 import android.util.Log
@@ -18,17 +18,17 @@ import androidx.navigation.navOptions
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
-import com.hakvardanyan.navigationsample.databinding.FragmentHomeBinding
+import com.hakvardanyan.navigationsample.databinding.FragmentMainBinding
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+class MainFragment : BaseFragment<FragmentMainBinding>() {
 
-    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentHomeBinding::inflate
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentMainBinding::inflate
 
-    private val homeGraphViewModel: HomeGraphViewModel by viewModel(ownerProducer = {
-        findNavController().getBackStackEntry(R.id.homeFragment)
+    private val mainGraphViewModel: MainGraphViewModel by viewModel(ownerProducer = {
+        findNavController().getBackStackEntry(R.id.mainFragment)
     })
 
     private val iconHomeActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_home_filled) }
@@ -49,13 +49,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        homeGraphViewModel.testValue
+        mainGraphViewModel.testValue
             .flowWithLifecycle(viewLifecycleOwner.lifecycle)
             .onEach { Log.d(":::::: ", it) }
             .launchIn(viewLifecycleOwner.lifecycleScope)
 
         binding?.apply {
-            val navController = nestedHomeNavigationHost.getFragment<NavHostFragment>().navController
+            val navController = nestedMainNavigationHost.getFragment<NavHostFragment>().navController
 
             homeItem.setOnClickListener {
                 navigateTo(R.id.inboxFragment, navController)

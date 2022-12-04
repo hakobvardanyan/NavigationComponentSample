@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.home.discount
+package com.hakvardanyan.navigationsample.main.discount
 
 import android.view.LayoutInflater
 import androidx.viewbinding.ViewBinding

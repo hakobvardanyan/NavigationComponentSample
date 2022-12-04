@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/outboxFragmentChild1"
-        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragmentChild1"
+        android:name="com.hakvardanyan.navigationsample.main.outbox.OutboxFragmentChild1"
         android:label="OutboxFragmentChild1"
         tools:layout="@layout/fragment_outbox_child1">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/outboxFragmentChild2"
-        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragmentChild2"
+        android:name="com.hakvardanyan.navigationsample.main.outbox.OutboxFragmentChild2"
         android:label="OutboxFragmentChild2"
         tools:layout="@layout/fragment_outbox_child2">
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/outboxFragmentChild3"
-        android:name="com.hakvardanyan.navigationsample.home.outbox.OutboxFragmentChild3"
+        android:name="com.hakvardanyan.navigationsample.main.outbox.OutboxFragmentChild3"
         android:label="OutboxFragmentChild3"
         tools:layout="@layout/fragment_outbox_child3" />
 </navigation>

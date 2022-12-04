@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".home.HomeFragment">
+    tools:context=".main.MainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Home Fragment"
+            android:text="Main Fragment"
             android:textColor="@color/black"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nested_home_navigation_host"
+        android:id="@+id/nested_main_navigation_host"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -35,7 +35,7 @@
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:navGraph="@navigation/home_navigation" />
+        app:navGraph="@navigation/main_navigation" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_navigation_view"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".home.tickets.TicketsFragment">
+    tools:context=".main.tickets.TicketsFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nested_tickets_navigation_host"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:navGraph="@navigation/tickets_navigation"
-        tools:context=".home.tickets.TicketsFragment" />
+        tools:context=".main.tickets.TicketsFragment" />
 
     <TextView
         android:id="@+id/sample_text"

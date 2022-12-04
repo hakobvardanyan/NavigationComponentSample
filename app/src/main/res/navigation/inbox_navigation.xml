@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/inboxFragmentChild1"
-        android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragmentChild1"
+        android:name="com.hakvardanyan.navigationsample.main.inbox.InboxFragmentChild1"
         android:label="InboxFragmentChild1"
         tools:layout="@layout/fragment_inbox_child1">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/inboxFragmentChild2"
-        android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragmentChild2"
+        android:name="com.hakvardanyan.navigationsample.main.inbox.InboxFragmentChild2"
         android:label="InboxFragmentChild2"
         tools:layout="@layout/fragment_inbox_child2">
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/inboxFragmentChild3"
-        android:name="com.hakvardanyan.navigationsample.home.inbox.InboxFragmentChild3"
+        android:name="com.hakvardanyan.navigationsample.main.inbox.InboxFragmentChild3"
         android:label="InboxFragmentChild3"
         tools:layout="@layout/fragment_inbox_child3" />
 </navigation>

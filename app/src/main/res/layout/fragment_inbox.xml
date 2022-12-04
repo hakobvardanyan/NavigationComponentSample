@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".home.inbox.InboxFragment">
+    tools:context=".main.inbox.InboxFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nested_inbox_navigation_host"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:navGraph="@navigation/inbox_navigation"
-        tools:context=".home.inbox.InboxFragment" />
+        tools:context=".main.inbox.InboxFragment" />
 
     <TextView
         android:id="@+id/sample_text"

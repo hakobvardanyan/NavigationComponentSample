@@ -18,7 +18,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
         binding?.apply {
 
             buttonLogIn.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_homeFragment, null, navOptions {
+                findNavController().navigate(R.id.action_loginFragment_to_mainFragment, null, navOptions {
                     anim {
                         enter = R.anim.slide_in_right
                         exit = R.anim.slide_out_left
