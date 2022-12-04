@@ -61,7 +61,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 navigateTo(R.id.homeFragment, navController)
             }
             walletItem.setOnClickListener {
-                navigateTo(R.id.outboxFragment, navController)
+                navigateTo(R.id.walletFragment, navController)
             }
             analysisItem.setOnClickListener {
                 navigateTo(R.id.ticketsFragment, navController)
@@ -119,7 +119,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                         destination.hierarchy.forEach {
                             when (it.id) {
                                 R.id.homeFragment -> homeItem.setImageDrawable(iconHomeActive)
-                                R.id.outboxFragment -> walletItem.setImageDrawable(iconWalletActive)
+                                R.id.walletFragment -> walletItem.setImageDrawable(iconWalletActive)
                                 R.id.ticketsFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
                                 R.id.discountFragment -> profileItem.setImageDrawable(iconProfileActive)
                             }

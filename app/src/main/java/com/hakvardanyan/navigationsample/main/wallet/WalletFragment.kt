@@ -1,4 +1,4 @@
-package com.hakvardanyan.navigationsample.main.outbox
+package com.hakvardanyan.navigationsample.main.wallet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,15 +13,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
-import com.hakvardanyan.navigationsample.databinding.FragmentOutboxBinding
+import com.hakvardanyan.navigationsample.databinding.FragmentWalletBinding
 import com.hakvardanyan.navigationsample.main.MainGraphViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.random.Random
 
-class OutboxFragment : BaseFragment<FragmentOutboxBinding>() {
+class WalletFragment : BaseFragment<FragmentWalletBinding>() {
 
-    override val bindingInitializer: (LayoutInflater) -> ViewBinding =
-        FragmentOutboxBinding::inflate
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentWalletBinding::inflate
 
     private val mainGraphViewModel: MainGraphViewModel by viewModel(ownerProducer = {
         requireActivity().findNavController(R.id.app_nav_host_container).getBackStackEntry(R.id.mainFragment)
@@ -31,7 +30,7 @@ class OutboxFragment : BaseFragment<FragmentOutboxBinding>() {
     private val onBackPressedCallback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             val navController =
-                requireNotNull(binding).nestedOutboxNavigationHost.getFragment<NavHostFragment>().navController
+                requireNotNull(binding).nestedWalletNavigationHost.getFragment<NavHostFragment>().navController
             navController.popBackStack(navController.graph.findStartDestination().id, false)
         }
     }
@@ -46,7 +45,7 @@ class OutboxFragment : BaseFragment<FragmentOutboxBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
             val navController =
-                nestedOutboxNavigationHost.getFragment<NavHostFragment>().navController
+                nestedWalletNavigationHost.getFragment<NavHostFragment>().navController
             activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, onBackPressedCallback)
             addDestinationChangeListener(navController)
 

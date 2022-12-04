@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:background="@color/window_background"
     android:layout_height="match_parent"
-    tools:context=".main.outbox.OutboxFragment">
+    tools:context=".main.wallet.WalletFragment">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nested_outbox_navigation_host"
+        android:id="@+id/nested_wallet_navigation_host"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:navGraph="@navigation/outbox_navigation" />
+        app:navGraph="@navigation/wallet_navigation" />
 
     <TextView
         android:id="@+id/sample_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OutboxFragment"
+        android:text="WalletFragment"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"

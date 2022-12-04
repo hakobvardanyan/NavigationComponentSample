@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.hakvardanyan.navigationsample.main.MainFragment"
-        android:label="fragment_main"
+        android:label="MainFragment"
         tools:layout="@layout/fragment_main" />
 
 </navigation>

@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.outbox.OutboxFragmentChild3">
+    tools:context=".main.wallet.WalletFragmentChild3">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Outbox Child Fragment 3" />
+        android:text="Wallet Child Fragment 3" />
 </FrameLayout>
