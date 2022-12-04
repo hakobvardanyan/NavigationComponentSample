@@ -13,5 +13,13 @@
     <string name="log_in">Log In</string>
     <string name="don_t_have_account">Don\'t have account?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="do_you_have_account">Do you have account?</string>
+    <string name="terms_of_services_description">I\'m agree to the Terms of Service and Privacy Policy</string>
+    <string name="agreement_part_1">I\'m agree to the\u0020</string>
+    <string name="agreement_part_2">Terms of Service</string>
+    <string name="agreement_part_3">\u0020and\u0020</string>
+    <string name="agreement_part_4">Privacy Policy</string>
 
 </resources>
