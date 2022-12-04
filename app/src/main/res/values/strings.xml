@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">Navigation Sample</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Sign In screen  -->
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_description">It was popularised in the 1960s with the release of Letraset sheetscontaining Lorem Ipsum.</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="label_or">Or</string>
+    <string name="email_title">Email address</string>
+    <string name="password_title">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="log_in">Log In</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="sign_up">Sign Up</string>
+
 </resources>

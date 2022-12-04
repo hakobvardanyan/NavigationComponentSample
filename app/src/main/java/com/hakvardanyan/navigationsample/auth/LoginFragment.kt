@@ -17,7 +17,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
 
-            buttonNavigateToHome.setOnClickListener {
+            buttonLogIn.setOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_homeFragment, null, navOptions {
                     anim {
                         enter = R.anim.slide_in_right
@@ -28,7 +28,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
                     popUpTo(R.id.auth_navigation)
                 })
             }
-            buttonNavigateToForgotPassword.setOnClickListener {
+            forgotPassword.setOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
             }
         }
