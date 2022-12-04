@@ -24,4 +24,6 @@
     <color name="gray_700">#61677D</color>
     <color name="gray_800">#3B4054</color>
     <color name="gray_900">#262626</color>
+
+    <color name="window_background">@color/gray_100</color>
 </resources>
