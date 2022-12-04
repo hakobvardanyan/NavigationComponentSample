@@ -8,6 +8,7 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.text.buildSpannedString
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
@@ -20,9 +21,17 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
 
-            val name = arguments?.getString("key.name")
-            val age = arguments?.getInt("key.age")
-            description.text = name?.plus(" $age")
+            buttonCreateAccount.setOnClickListener {
+                findNavController().navigate(R.id.action_registerFragment_to_homeFragment, null, navOptions {
+                    anim {
+                        enter = R.anim.slide_in_right
+                        exit = R.anim.slide_out_left
+                        popEnter = R.anim.slide_in_left
+                        popExit = R.anim.slide_out_right
+                    }
+                    popUpTo(R.id.auth_navigation)
+                })
+            }
 
             buttonSignIn.setOnClickListener {
                 findNavController().popBackStack()

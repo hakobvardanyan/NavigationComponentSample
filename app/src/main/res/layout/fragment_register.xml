@@ -238,6 +238,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
+        android:buttonTint="@color/primary_500"
         android:gravity="center_vertical"
         android:textColor="@color/gray_800"
         app:layout_constraintBottom_toTopOf="@+id/button_create_account"
