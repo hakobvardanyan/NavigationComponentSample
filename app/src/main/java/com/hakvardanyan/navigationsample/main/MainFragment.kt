@@ -58,7 +58,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             val navController = nestedMainNavigationHost.getFragment<NavHostFragment>().navController
 
             homeItem.setOnClickListener {
-                navigateTo(R.id.inboxFragment, navController)
+                navigateTo(R.id.homeFragment, navController)
             }
             walletItem.setOnClickListener {
                 navigateTo(R.id.outboxFragment, navController)
@@ -118,7 +118,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
                         destination.hierarchy.forEach {
                             when (it.id) {
-                                R.id.inboxFragment -> homeItem.setImageDrawable(iconHomeActive)
+                                R.id.homeFragment -> homeItem.setImageDrawable(iconHomeActive)
                                 R.id.outboxFragment -> walletItem.setImageDrawable(iconWalletActive)
                                 R.id.ticketsFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
                                 R.id.discountFragment -> profileItem.setImageDrawable(iconProfileActive)

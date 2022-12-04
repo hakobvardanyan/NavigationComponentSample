@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragmentChild1">
+
+    <fragment
+        android:id="@+id/homeFragmentChild1"
+        android:name="com.hakvardanyan.navigationsample.main.home.HomeFragmentChild1"
+        android:label="HomeFragmentChild1"
+        tools:layout="@layout/fragment_home_child1">
+        <action
+            android:id="@+id/action_homeFragmentChild1_to_homeFragmentChild2"
+            app:destination="@id/homeFragmentChild2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragmentChild2"
+        android:name="com.hakvardanyan.navigationsample.main.home.HomeFragmentChild2"
+        android:label="HomeFragmentChild2"
+        tools:layout="@layout/fragment_home_child2">
+        <action
+            android:id="@+id/action_homeFragmentChild2_to_homeFragmentChild3"
+            app:destination="@id/homeFragmentChild3" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragmentChild3"
+        android:name="com.hakvardanyan.navigationsample.main.home.HomeFragmentChild3"
+        android:label="HomeFragmentChild3"
+        tools:layout="@layout/fragment_home_child3" />
+</navigation>

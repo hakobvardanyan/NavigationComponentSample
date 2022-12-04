@@ -4,11 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.inbox.InboxFragmentChild3">
+    tools:context=".main.home.HomeFragmentChild2">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Inbox Child Fragment 3" />
+        android:text="Home Child Fragment 2" />
+
+    <Button
+        android:id="@+id/button_navigate_to_home_child3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="Navigate to Home Child 3"
+        android:textAllCaps="false" />
 </FrameLayout>

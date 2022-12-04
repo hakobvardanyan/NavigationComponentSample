@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@+id/outboxFragment">
+    app:startDestination="@+id/homeFragment">
 
     <fragment
-        android:id="@+id/inboxFragment"
-        android:name="com.hakvardanyan.navigationsample.main.inbox.InboxFragment"
-        android:label="InboxFragment"
-        tools:layout="@layout/fragment_inbox" />
+        android:id="@+id/homeFragment"
+        android:name="com.hakvardanyan.navigationsample.main.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/outboxFragment"
