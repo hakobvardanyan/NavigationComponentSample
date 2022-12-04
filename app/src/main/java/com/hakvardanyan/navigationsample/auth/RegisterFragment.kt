@@ -33,7 +33,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     }
 
     private fun buildAgreementText() = buildSpannedString {
-        val color = ContextCompat.getColor(requireContext(), R.color.primary_600)
+        val color = ContextCompat.getColor(requireContext(), R.color.primary_500)
         append(getString(R.string.agreement_part_1))
         append(getString(R.string.agreement_part_2), ForegroundColorSpan(color), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         append(getString(R.string.agreement_part_3))
