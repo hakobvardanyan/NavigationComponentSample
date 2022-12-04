@@ -18,10 +18,10 @@
         tools:layout="@layout/fragment_wallet" />
 
     <fragment
-        android:id="@+id/ticketsFragment"
-        android:name="com.hakvardanyan.navigationsample.main.tickets.TicketsFragment"
-        android:label="TicketsFragment"
-        tools:layout="@layout/fragment_tickets" />
+        android:id="@+id/analysisFragment"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragment"
+        android:label="AnalysisFragment"
+        tools:layout="@layout/fragment_analysis" />
 
     <fragment
         android:id="@+id/discountFragment"

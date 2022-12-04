@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/analysis_navigation"
+    app:startDestination="@id/analysisFragmentChild1">
+
+    <fragment
+        android:id="@+id/analysisFragmentChild1"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragmentChild1"
+        android:label="AnalysisFragmentChild1"
+        tools:layout="@layout/fragment_analysis_child1">
+        <action
+            android:id="@+id/action_analysisFragmentChild1_to_analysisFragmentChild2"
+            app:destination="@id/analysisFragmentChild2" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisFragmentChild2"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragmentChild2"
+        android:label="AnalysisFragmentChild2"
+        tools:layout="@layout/fragment_analysis_child2">
+        <action
+            android:id="@+id/action_analysisFragmentChild2_to_analysisFragmentChild3"
+            app:destination="@id/analysisFragmentChild3" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisFragmentChild3"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragmentChild3"
+        android:label="AnalysisFragmentChild3"
+        tools:layout="@layout/fragment_analysis_child3" />
+</navigation>

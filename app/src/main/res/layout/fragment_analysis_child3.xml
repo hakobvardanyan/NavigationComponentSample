@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.tickets.TicketsFragmentChild3">
+    tools:context=".main.analysis.AnalysisFragmentChild3">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Tickets Child Fragment 3" />
+        android:text="Analysis Child Fragment 3" />
 </FrameLayout>
