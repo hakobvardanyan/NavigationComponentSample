@@ -21,7 +21,7 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
             description.text = name?.plus(" $age")
 
             buttonNavigateToLogin.setOnClickListener {
-                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+                findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
             }
         }
     }

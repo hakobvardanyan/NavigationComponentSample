@@ -31,6 +31,9 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>() {
             forgotPassword.setOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
             }
+            buttonSignUp.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+            }
         }
     }
 }
