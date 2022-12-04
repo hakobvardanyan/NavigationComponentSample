@@ -4,20 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.discount.DiscountFragmentChild1">
+    tools:context=".main.profile.ProfileFragmentChild1">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Discount Child Fragment 2" />
-
-    <Button
-        android:id="@+id/button_navigate_to_discount_child3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_margin="16dp"
-        android:text="Navigate to Discount Child 3"
-        android:textAllCaps="false" />
+        android:text="Profile Child Fragment 3" />
 </FrameLayout>

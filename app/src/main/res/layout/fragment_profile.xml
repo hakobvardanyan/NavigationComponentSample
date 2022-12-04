@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.discount.DiscountFragment">
+    tools:context=".main.profile.ProfileFragment">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nested_discount_navigation_host"
+        android:id="@+id/nested_profile_navigation_host"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:navGraph="@navigation/discount_navigation" />
+        app:navGraph="@navigation/profile_navigation" />
 
     <TextView
         android:id="@+id/sample_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DiscountFragment"
+        android:text="ProfileFragment"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"

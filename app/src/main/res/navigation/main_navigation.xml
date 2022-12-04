@@ -24,8 +24,8 @@
         tools:layout="@layout/fragment_analysis" />
 
     <fragment
-        android:id="@+id/discountFragment"
-        android:name="com.hakvardanyan.navigationsample.main.discount.DiscountFragment"
-        android:label="DiscountFragment"
-        tools:layout="@layout/fragment_discount" />
+        android:id="@+id/profileFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

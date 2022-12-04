@@ -67,7 +67,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 navigateTo(R.id.analysisFragment, navController)
             }
             profileItem.setOnClickListener {
-                navigateTo(R.id.discountFragment, navController)
+                navigateTo(R.id.profileFragment, navController)
             }
 
             addDestinationChangeListener(navController)
@@ -121,7 +121,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                                 R.id.homeFragment -> homeItem.setImageDrawable(iconHomeActive)
                                 R.id.walletFragment -> walletItem.setImageDrawable(iconWalletActive)
                                 R.id.analysisFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
-                                R.id.discountFragment -> profileItem.setImageDrawable(iconProfileActive)
+                                R.id.profileFragment -> profileItem.setImageDrawable(iconProfileActive)
                             }
                         }
                     } ?: navController.removeOnDestinationChangedListener(this)
