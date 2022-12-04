@@ -5,7 +5,7 @@
     android:id="@+id/app_navigation"
     app:startDestination="@id/splashFragment">
 
-    <include app:graph="@navigation/auth_navigation"/>
+    <include app:graph="@navigation/auth_navigation" />
 
     <fragment
         android:id="@+id/splashFragment"
@@ -15,12 +15,12 @@
         <action
             android:id="@+id/action_splashFragment_to_registerFragment"
             app:destination="@id/auth_navigation"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
             app:popUpTo="@id/splashFragment"
-            app:popUpToInclusive="true"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment

@@ -14,10 +14,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.buttonNavigateToRegister?.setOnClickListener {
-            findNavController().navigate(
-                R.id.action_splashFragment_to_registerFragment,
-                bundleOf("key.name" to "Hakob", "key.age" to 35)
-            )
+            findNavController().navigate(R.id.action_splashFragment_to_registerFragment)
         }
     }
 }
