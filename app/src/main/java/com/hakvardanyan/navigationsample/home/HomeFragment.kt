@@ -57,16 +57,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         binding?.apply {
             val navController = nestedHomeNavigationHost.getFragment<NavHostFragment>().navController
 
-            inboxItem.setOnClickListener {
+            homeItem.setOnClickListener {
                 navigateTo(R.id.inboxFragment, navController)
             }
-            outboxItem.setOnClickListener {
+            walletItem.setOnClickListener {
                 navigateTo(R.id.outboxFragment, navController)
             }
-            airplaneTicketItem.setOnClickListener {
+            analysisItem.setOnClickListener {
                 navigateTo(R.id.ticketsFragment, navController)
             }
-            discountItem.setOnClickListener {
+            profileItem.setOnClickListener {
                 navigateTo(R.id.discountFragment, navController)
             }
 
@@ -111,17 +111,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     arguments: Bundle?
                 ) {
                     binding?.apply {
-                        inboxItem.setImageDrawable(iconHomeInactive)
-                        outboxItem.setImageDrawable(iconWalletInactive)
-                        airplaneTicketItem.setImageDrawable(iconAnalysisInactive)
-                        discountItem.setImageDrawable(iconProfileInactive)
+                        homeItem.setImageDrawable(iconHomeInactive)
+                        walletItem.setImageDrawable(iconWalletInactive)
+                        analysisItem.setImageDrawable(iconAnalysisInactive)
+                        profileItem.setImageDrawable(iconProfileInactive)
 
                         destination.hierarchy.forEach {
                             when (it.id) {
-                                R.id.inboxFragment -> inboxItem.setImageDrawable(iconHomeActive)
-                                R.id.outboxFragment -> outboxItem.setImageDrawable(iconWalletActive)
-                                R.id.ticketsFragment -> airplaneTicketItem.setImageDrawable(iconAnalysisActive)
-                                R.id.discountFragment -> discountItem.setImageDrawable(iconProfileActive)
+                                R.id.inboxFragment -> homeItem.setImageDrawable(iconHomeActive)
+                                R.id.outboxFragment -> walletItem.setImageDrawable(iconWalletActive)
+                                R.id.ticketsFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
+                                R.id.discountFragment -> profileItem.setImageDrawable(iconProfileActive)
                             }
                         }
                     } ?: navController.removeOnDestinationChangedListener(this)
