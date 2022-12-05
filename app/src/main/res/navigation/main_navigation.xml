@@ -24,8 +24,8 @@
         tools:layout="@layout/fragment_analysis" />
 
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.hakvardanyan.navigationsample.main.profile.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/profileContainerFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.ProfileContainerFragment"
+        android:label="ProfileContainerFragment"
+        tools:layout="@layout/fragment_profile_container" />
 </navigation>
