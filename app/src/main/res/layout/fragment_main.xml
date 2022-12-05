@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@android:color/holo_blue_light"
+        android:background="@color/primary_400"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Main Fragment"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -31,7 +31,6 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingBottom="68dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"

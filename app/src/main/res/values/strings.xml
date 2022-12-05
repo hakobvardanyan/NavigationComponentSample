@@ -23,5 +23,12 @@
     <string name="agreement_part_3">\u0020and\u0020</string>
     <string name="agreement_part_4">Privacy Policy</string>
     <string name="action_continue">Continue</string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="privacy_and_policy">Privacy and Policy</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="log_out">Log out</string>
+    <string name="user_name">Robert Downey Jr.</string>
 
 </resources>

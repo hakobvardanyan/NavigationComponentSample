@@ -26,4 +26,5 @@
     <color name="gray_900">#262626</color>
 
     <color name="window_background">@color/gray_100</color>
+    <color name="red">#EA4545</color>
 </resources>

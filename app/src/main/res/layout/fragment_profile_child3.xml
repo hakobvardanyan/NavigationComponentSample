@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.profile.ProfileFragmentChild1">
+    tools:context=".main.profile.ProfileFragment">
 
     <TextView
         android:layout_width="match_parent"

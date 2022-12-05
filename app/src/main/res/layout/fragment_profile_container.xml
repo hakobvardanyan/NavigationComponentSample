@@ -14,14 +14,5 @@
         android:layout_height="match_parent"
         app:navGraph="@navigation/profile_navigation" />
 
-    <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profile Container Fragment"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--  Here you can add views that need to be shown on top of the all nested fragments  -->
 </androidx.constraintlayout.widget.ConstraintLayout>
