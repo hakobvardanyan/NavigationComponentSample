@@ -21,6 +21,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
             buttonNotifications.setOnClickListener {
                 findNavController().navigate(R.id.action_profileFragment_to_notificationsFragment)
             }
+            buttonSettings.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
+            }
         }
     }
 }

@@ -29,5 +29,11 @@
     <string name="contact_us">Contact Us</string>
     <string name="log_out">Log out</string>
     <string name="user_name">Robert Downey Jr.</string>
+    <string name="theme">Theme</string>
+    <string name="receive_emails">Receive emails</string>
+    <string name="push_notifications">Push notifications</string>
+    <string name="language">Language</string>
+    <string name="account">Account</string>
+    <string name="security">Security</string>
 
 </resources>

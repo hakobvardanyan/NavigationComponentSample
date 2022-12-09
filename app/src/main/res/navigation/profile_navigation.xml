@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_profileFragment_to_notificationsFragment"
             app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragmentChild2"
@@ -45,4 +48,9 @@
         android:name="com.hakvardanyan.navigationsample.main.profile.NotificationDetailsFragment"
         android:label="NotificationDetailsFragment"
         tools:layout="@layout/fragment_notification_details" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

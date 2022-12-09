@@ -25,4 +25,9 @@
         <item name="android:paddingBottom">12dp</item>
         <item name="android:textColor">@color/gray_900</item>
     </style>
+
+    <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@color/switch_thumb_color</item>
+        <item name="trackTint">@color/switch_track_color</item>
+    </style>
 </resources>
