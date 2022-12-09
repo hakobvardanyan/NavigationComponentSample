@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_profileFragment_to_profileFragmentChild2"
             app:destination="@id/profileFragmentChild2" />
+        <action
+            android:id="@+id/action_profileFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragmentChild2"
@@ -28,4 +31,9 @@
         android:name="com.hakvardanyan.navigationsample.main.profile.ProfileFragmentChild3"
         android:label="ProfileFragmentChild3"
         tools:layout="@layout/fragment_profile_child3" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.NotificationsFragment"
+        android:label="NotificationsFragment"
+        tools:layout="@layout/fragment_notifications" />
 </navigation>

@@ -14,8 +14,13 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
     override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentProfileBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding?.buttonLogout?.setOnClickListener {
-            findNavController().navigate(R.id.action_profileFragment_to_profileFragmentChild2)
+        binding?.apply {
+            buttonLogout.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_profileFragmentChild2)
+            }
+            buttonNotifications.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_notificationsFragment)
+            }
         }
     }
 }
