@@ -35,5 +35,14 @@
         android:id="@+id/notificationsFragment"
         android:name="com.hakvardanyan.navigationsample.main.profile.NotificationsFragment"
         android:label="NotificationsFragment"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_notificationDetailsFragment"
+            app:destination="@id/notificationDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationDetailsFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.NotificationDetailsFragment"
+        android:label="NotificationDetailsFragment"
+        tools:layout="@layout/fragment_notification_details" />
 </navigation>

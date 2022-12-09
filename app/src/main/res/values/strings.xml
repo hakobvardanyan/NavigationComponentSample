@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Navigation Sample</string>
 
-    <!--  Sign In screen  -->
     <string name="sign_in">Sign In</string>
     <string name="sign_in_description">It was popularised in the 1960s with the release of Letraset sheetscontaining Lorem Ipsum.</string>
     <string name="forgot_password_description">That\'s OK, it happens! Click on the button below to get a new password on your email address.</string>

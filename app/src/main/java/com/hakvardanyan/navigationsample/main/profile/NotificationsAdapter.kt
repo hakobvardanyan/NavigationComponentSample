@@ -2,13 +2,11 @@ package com.hakvardanyan.navigationsample.main.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.RecyclerView
-import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.ItemViewNotificationBinding
-import com.hakvardanyan.navigationsample.main.profile.NotificationsAdapter.Notification.*
+import com.hakvardanyan.navigationsample.main.profile.Notification.*
 
-class NotificationsAdapter : RecyclerView.Adapter<NotificationsAdapter.NotificationViewHolder>() {
+class NotificationsAdapter(private val onItemClick: (Notification) -> Unit) : RecyclerView.Adapter<NotificationsAdapter.NotificationViewHolder>() {
 
     private val notifications = listOf(
         TRANSFER,
@@ -48,28 +46,19 @@ class NotificationsAdapter : RecyclerView.Adapter<NotificationsAdapter.Notificat
         private val binding: ItemViewNotificationBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        private var boundData = INCOME
+
+        init {
+            itemView.setOnClickListener {
+                onItemClick(boundData)
+            }
+        }
+
         fun bind(data: Notification) {
+            boundData = data
             binding.title.text = data.title
             binding.description.text = data.description
             binding.icon.setImageResource(data.drawable)
         }
-    }
-
-    enum class Notification(
-        val title: String,
-        val description: String,
-        @DrawableRes val drawable: Int
-    ) {
-        INCOME("Income", description2, R.drawable.ic_income),
-        OUTCOME("Outcome", description1, R.drawable.ic_outcome),
-        PAYMENT("Payment", description3, R.drawable.ic_payment),
-        TRANSFER("Transfer", description1, R.drawable.ic_money_transfer),
-        PURCHASE("Shopping", description2, R.drawable.ic_shopping_cart)
-    }
-
-    private companion object {
-        const val description1 = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum"
-        const val description2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-        const val description3 = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia"
     }
 }
