@@ -24,6 +24,12 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
             buttonSettings.setOnClickListener {
                 findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
             }
+            buttonTerms.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_termsConditionsFragment)
+            }
+            buttonPrivacy.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_privacyPolicyFragment)
+            }
         }
     }
 }

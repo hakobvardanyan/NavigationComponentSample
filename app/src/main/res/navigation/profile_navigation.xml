@@ -19,6 +19,12 @@
         <action
             android:id="@+id/action_profileFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_termsConditionsFragment"
+            app:destination="@id/termsConditionsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragmentChild2"
@@ -53,4 +59,14 @@
         android:name="com.hakvardanyan.navigationsample.main.profile.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/termsConditionsFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.TermsConditionsFragment"
+        android:label="TermsConditionsFragment"
+        tools:layout="@layout/fragment_terms_conditions" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.PrivacyPolicyFragment"
+        android:label="PrivacyPolicyFragment"
+        tools:layout="@layout/fragment_privacy_policy" />
 </navigation>
