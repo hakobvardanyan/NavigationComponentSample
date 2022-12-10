@@ -13,7 +13,7 @@ class NotificationDetailsFragment : BaseFragment<FragmentNotificationDetailsBind
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
-            val notification = arguments?.getSerializable("test") as? Notification ?: Notification.INCOME
+            val notification = arguments?.getSerializable(KEY_NOTIFICATION) as? Notification ?: Notification.INCOME
             title.text = notification.title
             icon.setImageResource(notification.drawable)
             description.text = DESCRIPTION

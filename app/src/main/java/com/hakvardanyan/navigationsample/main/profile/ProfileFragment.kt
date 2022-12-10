@@ -15,9 +15,6 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
-            buttonLogout.setOnClickListener {
-                findNavController().navigate(R.id.action_profileFragment_to_profileFragmentChild2)
-            }
             buttonNotifications.setOnClickListener {
                 findNavController().navigate(R.id.action_profileFragment_to_notificationsFragment)
             }

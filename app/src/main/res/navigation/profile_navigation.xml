@@ -11,9 +11,6 @@
         android:label="FragmentProfileChild1"
         tools:layout="@layout/fragment_profile">
         <action
-            android:id="@+id/action_profileFragment_to_profileFragmentChild2"
-            app:destination="@id/profileFragmentChild2" />
-        <action
             android:id="@+id/action_profileFragment_to_notificationsFragment"
             app:destination="@id/notificationsFragment" />
         <action
@@ -29,20 +26,6 @@
             android:id="@+id/action_profileFragment_to_contactUsFragment"
             app:destination="@id/contactUsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/profileFragmentChild2"
-        android:name="com.hakvardanyan.navigationsample.main.profile.ProfileFragmentChild2"
-        android:label="ProfileFragmentChild2"
-        tools:layout="@layout/fragment_profile_child2">
-        <action
-            android:id="@+id/action_profileFragmentChild2_to_profileFragmentChild3"
-            app:destination="@id/profileFragmentChild3" />
-    </fragment>
-    <fragment
-        android:id="@+id/profileFragmentChild3"
-        android:name="com.hakvardanyan.navigationsample.main.profile.ProfileFragmentChild3"
-        android:label="ProfileFragmentChild3"
-        tools:layout="@layout/fragment_profile_child3" />
     <fragment
         android:id="@+id/notificationsFragment"
         android:name="com.hakvardanyan.navigationsample.main.profile.NotificationsFragment"
