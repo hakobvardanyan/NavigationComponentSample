@@ -45,6 +45,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
      * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
      * By second time clicking on menu item it must pop to nested start destination
      * implement Toolbar back button functionality
+     *
+     * Add FAB or smt in container fragments to prouve nested navigation container concept
      */
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -52,7 +54,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             val navController = nestedMainNavigationHost.getFragment<NavHostFragment>().navController
 
             homeItem.setOnClickListener {
-                navigateTo(R.id.homeFragment, navController)
+                navigateTo(R.id.homeContainerFragment, navController)
             }
             walletItem.setOnClickListener {
                 navigateTo(R.id.walletFragment, navController)
@@ -127,7 +129,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
                         destination.hierarchy.forEach {
                             when (it.id) {
-                                R.id.homeFragment -> homeItem.setImageDrawable(iconHomeActive)
+                                R.id.homeContainerFragment -> homeItem.setImageDrawable(iconHomeActive)
                                 R.id.walletFragment -> walletItem.setImageDrawable(iconWalletActive)
                                 R.id.analysisFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
                                 R.id.profileContainerFragment -> profileItem.setImageDrawable(iconProfileActive)

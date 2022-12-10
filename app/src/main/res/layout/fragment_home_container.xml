@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.home.HomeFragment">
+    tools:context=".main.home.HomeContainerFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nested_home_navigation_host"
@@ -13,16 +13,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:navGraph="@navigation/home_navigation"
-        tools:context=".main.home.HomeFragment" />
-
-    <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HomeFragment"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".main.home.HomeContainerFragment" />
 </androidx.constraintlayout.widget.ConstraintLayout>
