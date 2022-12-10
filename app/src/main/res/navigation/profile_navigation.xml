@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_profileFragment_to_privacyPolicyFragment"
             app:destination="@id/privacyPolicyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_contactUsFragment"
+            app:destination="@id/contactUsFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragmentChild2"
@@ -69,4 +72,9 @@
         android:name="com.hakvardanyan.navigationsample.main.profile.PrivacyPolicyFragment"
         android:label="PrivacyPolicyFragment"
         tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/contactUsFragment"
+        android:name="com.hakvardanyan.navigationsample.main.profile.ContactUsFragment"
+        android:label="ContactUsFragment"
+        tools:layout="@layout/fragment_contact_us" />
 </navigation>

@@ -30,6 +30,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
             buttonPrivacy.setOnClickListener {
                 findNavController().navigate(R.id.action_profileFragment_to_privacyPolicyFragment)
             }
+            buttonContactUs.setOnClickListener {
+                findNavController().navigate(R.id.action_profileFragment_to_contactUsFragment)
+            }
         }
     }
 }
