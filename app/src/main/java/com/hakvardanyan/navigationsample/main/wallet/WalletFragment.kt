@@ -50,7 +50,7 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
             addDestinationChangeListener(navController)
 
             sampleText.setOnClickListener {
-                mainGraphViewModel.submitValue(Random.nextDouble().toString())
+                mainGraphViewModel.submitToolbarBackEvent()
             }
         }
     }

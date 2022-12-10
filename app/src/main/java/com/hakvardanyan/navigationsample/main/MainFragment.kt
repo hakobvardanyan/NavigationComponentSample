@@ -1,11 +1,11 @@
 package com.hakvardanyan.navigationsample.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -48,12 +48,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
      */
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        mainGraphViewModel.testValue
-            .flowWithLifecycle(viewLifecycleOwner.lifecycle)
-            .onEach { Log.d(":::::: ", it) }
-            .launchIn(viewLifecycleOwner.lifecycleScope)
-
         binding?.apply {
             val navController = nestedMainNavigationHost.getFragment<NavHostFragment>().navController
 
@@ -70,9 +64,24 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 navigateTo(R.id.profileContainerFragment, navController)
             }
 
+            buttonBack.setOnClickListener {
+                mainGraphViewModel.submitToolbarBackEvent()
+            }
+
+            mainGraphViewModel.showToolbarBackButton
+                .flowWithLifecycle(viewLifecycleOwner.lifecycle)
+                .onEach { buttonBack.isVisible = it }
+                .launchIn(viewLifecycleOwner.lifecycleScope)
+
+            mainGraphViewModel.toolbarTitle
+                .flowWithLifecycle(viewLifecycleOwner.lifecycle)
+                .onEach { toolbarTitle.text = getString(it) }
+                .launchIn(viewLifecycleOwner.lifecycleScope)
+
             addDestinationChangeListener(navController)
             addOnBackPressedCallback(navController)
         }
+
     }
 
     private fun navigateTo(destinationId: Int, navController: NavController) {
