@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/wallet_navigation"
-    app:startDestination="@id/walletFragmentChild1">
+    app:startDestination="@id/walletFragment">
 
     <fragment
         android:id="@+id/walletFragmentChild1"
@@ -28,4 +28,9 @@
         android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragmentChild3"
         android:label="WalletFragmentChild3"
         tools:layout="@layout/fragment_wallet_child3" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragment"
+        android:label="WalletFragment"
+        tools:layout="@layout/fragment_wallet" />
 </navigation>

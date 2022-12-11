@@ -35,14 +35,9 @@ class WalletContainerFragment : BaseFragment<FragmentWalletContainerBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
-            val navController =
-                nestedWalletNavigationHost.getFragment<NavHostFragment>().navController
+            val navController = nestedWalletNavigationHost.getFragment<NavHostFragment>().navController
             activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, onBackPressedCallback)
             addDestinationChangeListener(navController)
-
-            sampleText.setOnClickListener {
-                mainGraphViewModel.submitToolbarBackEvent()
-            }
         }
     }
 
