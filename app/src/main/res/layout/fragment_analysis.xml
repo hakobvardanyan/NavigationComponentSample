@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/window_background"
-    tools:context=".main.analysis.AnalysisFragment">
+    tools:context=".main.analysis.AnalysisContainerFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nested_analysis_navigation_host"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:navGraph="@navigation/analysis_navigation"
-        tools:context=".main.analysis.AnalysisFragment" />
+        tools:context=".main.analysis.AnalysisContainerFragment" />
 
     <TextView
         android:id="@+id/sample_text"

@@ -18,9 +18,9 @@
         tools:layout="@layout/fragment_wallet_container" />
 
     <fragment
-        android:id="@+id/analysisFragment"
-        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragment"
-        android:label="AnalysisFragment"
+        android:id="@+id/analysisContainerFragment"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisContainerFragment"
+        android:label="AnalysisContainerFragment"
         tools:layout="@layout/fragment_analysis" />
 
     <fragment

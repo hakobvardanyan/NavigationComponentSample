@@ -5,7 +5,7 @@ import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.databinding.FragmentAnalysisBinding
 
-class AnalysisFragment : BaseFragment<FragmentAnalysisBinding>() {
+class AnalysisContainerFragment : BaseFragment<FragmentAnalysisBinding>() {
 
     override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentAnalysisBinding::inflate
 

@@ -60,7 +60,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 navigateTo(R.id.walletContainerFragment, navController)
             }
             analysisItem.setOnClickListener {
-                navigateTo(R.id.analysisFragment, navController)
+                navigateTo(R.id.analysisContainerFragment, navController)
             }
             profileItem.setOnClickListener {
                 navigateTo(R.id.profileContainerFragment, navController)
@@ -131,7 +131,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                             when (it.id) {
                                 R.id.homeContainerFragment -> homeItem.setImageDrawable(iconHomeActive)
                                 R.id.walletContainerFragment -> walletItem.setImageDrawable(iconWalletActive)
-                                R.id.analysisFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
+                                R.id.analysisContainerFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
                                 R.id.profileContainerFragment -> profileItem.setImageDrawable(iconProfileActive)
                             }
                         }
