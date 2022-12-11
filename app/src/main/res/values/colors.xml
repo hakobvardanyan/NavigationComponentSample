@@ -27,4 +27,6 @@
 
     <color name="window_background">@color/gray_100</color>
     <color name="red">#EA4545</color>
+    <color name="red_dark">#D90429</color>
+    <color name="green">#21BF73</color>
 </resources>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_navigation"
-    app:startDestination="@id/homeFragmentChild1">
+    app:startDestination="@id/tradingFragment">
 
     <fragment
         android:id="@+id/homeFragmentChild1"
@@ -28,4 +28,9 @@
         android:name="com.hakvardanyan.navigationsample.main.home.HomeFragmentChild3"
         android:label="HomeFragmentChild3"
         tools:layout="@layout/fragment_home_child3" />
+    <fragment
+        android:id="@+id/tradingFragment"
+        android:name="com.hakvardanyan.navigationsample.main.home.TradingFragment"
+        android:label="TradingFragment"
+        tools:layout="@layout/fragment_trading" />
 </navigation>
