@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_home_container" />
 
     <fragment
-        android:id="@+id/walletFragment"
-        android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragment"
-        android:label="WalletFragment"
-        tools:layout="@layout/fragment_wallet" />
+        android:id="@+id/walletContainerFragment"
+        android:name="com.hakvardanyan.navigationsample.main.wallet.WalletContainerFragment"
+        android:label="WalletContainerFragment"
+        tools:layout="@layout/fragment_wallet_container" />
 
     <fragment
         android:id="@+id/analysisFragment"

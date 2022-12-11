@@ -13,18 +13,16 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
-import com.hakvardanyan.navigationsample.databinding.FragmentWalletBinding
+import com.hakvardanyan.navigationsample.databinding.FragmentWalletContainerBinding
 import com.hakvardanyan.navigationsample.main.MainGraphViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import kotlin.random.Random
 
-class WalletFragment : BaseFragment<FragmentWalletBinding>() {
+class WalletContainerFragment : BaseFragment<FragmentWalletContainerBinding>() {
 
-    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentWalletBinding::inflate
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentWalletContainerBinding::inflate
 
     private val mainGraphViewModel: MainGraphViewModel by viewModel(ownerProducer = {
         requireActivity().findNavController(R.id.app_nav_host_container).getBackStackEntry(R.id.mainFragment)
-//        findHomeFragment(parentFragment) ?: this
     })
 
     private val onBackPressedCallback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
@@ -34,13 +32,6 @@ class WalletFragment : BaseFragment<FragmentWalletBinding>() {
             navController.popBackStack(navController.graph.findStartDestination().id, false)
         }
     }
-
-//    private fun findHomeFragment(currentFragment: Fragment?): HomeFragment? =
-//        if (currentFragment is HomeFragment) {
-//            currentFragment
-//        } else {
-//            findHomeFragment(currentFragment?.parentFragment)
-//        }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
