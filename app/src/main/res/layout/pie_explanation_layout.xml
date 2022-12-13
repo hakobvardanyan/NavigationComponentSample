@@ -26,8 +26,8 @@
         android:orientation="horizontal">
 
         <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:background="@drawable/background_pie_payment" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -47,8 +47,8 @@
         android:orientation="horizontal">
 
         <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:background="@drawable/background_pie_send_money" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -68,8 +68,8 @@
         android:orientation="horizontal">
 
         <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:background="@drawable/background_pie_transfers" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -89,8 +89,8 @@
         android:orientation="horizontal">
 
         <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:background="@drawable/background_pre_approved_payment" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -110,8 +110,8 @@
         android:orientation="horizontal">
 
         <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:background="@drawable/background_pie_bills" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -131,8 +131,8 @@
         android:orientation="horizontal">
 
         <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:background="@drawable/background_pie_pending_transactions" />
 
         <androidx.appcompat.widget.AppCompatTextView
