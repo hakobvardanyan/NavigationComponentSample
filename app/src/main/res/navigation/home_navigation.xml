@@ -41,5 +41,9 @@
         android:id="@+id/coinDetailFragment"
         android:name="com.hakvardanyan.navigationsample.main.home.CoinDetailFragment"
         android:label="CoinDetailFragment"
-        tools:layout="@layout/fragment_coin_detail" />
+        tools:layout="@layout/fragment_coin_detail" >
+        <action
+            android:id="@+id/action_coinDetailFragment_to_homeFragmentChild1"
+            app:destination="@id/homeFragmentChild1" />
+    </fragment>
 </navigation>

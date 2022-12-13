@@ -8,7 +8,10 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="Inbox Child Fragment 3" />
+        android:text="Home Child Fragment 3"
+        android:textColor="@color/gray_900"
+        android:textSize="26sp" />
 </FrameLayout>

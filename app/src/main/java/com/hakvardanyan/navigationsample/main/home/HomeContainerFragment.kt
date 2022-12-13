@@ -71,6 +71,9 @@ class HomeContainerFragment : BaseFragment<FragmentHomeContainerBinding>() {
 
     private fun submitToolbarTitle(destinationId: Int) = when (destinationId) {
         R.id.tradingFragment -> R.string.home
+        R.id.homeFragmentChild1 -> R.string.home_child_1
+        R.id.homeFragmentChild2 -> R.string.home_child_2
+        R.id.homeFragmentChild3 -> R.string.home_child_3
         R.id.coinDetailFragment -> R.string.coin_details
         else -> null
     }?.let(mainGraphViewModel::submitToolbarTitle)
