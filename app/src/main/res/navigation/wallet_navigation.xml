@@ -34,12 +34,16 @@
         android:label="WalletFragment"
         tools:layout="@layout/fragment_wallet" >
         <action
-            android:id="@+id/action_walletFragment_to_coinDetailFragment"
-            app:destination="@id/coinDetailFragment" />
+            android:id="@+id/action_walletFragment_to_cardDetailsFragment"
+            app:destination="@id/cardDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/coinDetailFragment"
-        android:name="com.hakvardanyan.navigationsample.main.home.CoinDetailFragment"
-        android:label="CoinDetailFragment2"
-        tools:layout="@layout/fragment_coin_detail" />
+        android:id="@+id/cardDetailsFragment"
+        android:name="com.hakvardanyan.navigationsample.main.wallet.CardDetailsFragment"
+        android:label="CardDetailsFragment"
+        tools:layout="@layout/fragment_card_details" >
+        <action
+            android:id="@+id/action_cardDetailsFragment_to_walletFragmentChild1"
+            app:destination="@id/walletFragmentChild1" />
+    </fragment>
 </navigation>
