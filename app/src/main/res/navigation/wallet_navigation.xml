@@ -32,5 +32,14 @@
         android:id="@+id/walletFragment"
         android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragment"
         android:label="WalletFragment"
-        tools:layout="@layout/fragment_wallet" />
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_walletFragment_to_coinDetailFragment"
+            app:destination="@id/coinDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinDetailFragment"
+        android:name="com.hakvardanyan.navigationsample.main.home.CoinDetailFragment"
+        android:label="CoinDetailFragment2"
+        tools:layout="@layout/fragment_coin_detail" />
 </navigation>
