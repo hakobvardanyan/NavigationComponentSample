@@ -39,6 +39,10 @@
     <string name="profile">Profile</string>
     <string name="coin_details">Coin details</string>
     <string name="wallet">Wallet</string>
+    <string name="analysis">Analysis</string>
+    <string name="analysis_child_1">Analysis Child 1</string>
+    <string name="analysis_child_2">Analysis Child 2</string>
+    <string name="analysis_child_3">Analysis Child 3</string>
     <string name="home">Home</string>
     <string name="privacy_policy"><b>1. Introduction</b>\n\nWe are responsible for maintaining and protecting the Personal Information under our control. We have designated an individual or individuals who is/are responsible for compliance with our privacy policy.\n
         \n<b>2.Identifying Purposes</b>\n\nWe collect, use and disclose Personal Information to provide you with the product or service you have requested and to offer you additional products and services we believe you might be interested in. The purposes for which we collect Personal Information will be identified before or at the time we collect the information. In certain circumstances, the purposes for which information is collected may be clear, and consent may be implied, such as where your name, address and payment information is provided as part of the order process.\n

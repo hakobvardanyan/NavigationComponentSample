@@ -32,5 +32,9 @@
         android:id="@+id/analysisFragment"
         android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragment"
         android:label="AnalysisFragment"
-        tools:layout="@layout/fragment_analysis" />
+        tools:layout="@layout/fragment_analysis" >
+        <action
+            android:id="@+id/action_analysisFragment_to_analysisFragmentChild1"
+            app:destination="@id/analysisFragmentChild1" />
+    </fragment>
 </navigation>
