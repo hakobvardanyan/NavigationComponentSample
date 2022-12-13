@@ -21,7 +21,7 @@
         android:id="@+id/analysisContainerFragment"
         android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisContainerFragment"
         android:label="AnalysisContainerFragment"
-        tools:layout="@layout/fragment_analysis" />
+        tools:layout="@layout/fragment_analysis_container" />
 
     <fragment
         android:id="@+id/profileContainerFragment"

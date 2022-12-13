@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/analysis_navigation"
-    app:startDestination="@id/analysisFragmentChild1">
+    app:startDestination="@id/analysisFragment">
 
     <fragment
         android:id="@+id/analysisFragmentChild1"
@@ -28,4 +28,9 @@
         android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragmentChild3"
         android:label="AnalysisFragmentChild3"
         tools:layout="@layout/fragment_analysis_child3" />
+    <fragment
+        android:id="@+id/analysisFragment"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragment"
+        android:label="AnalysisFragment"
+        tools:layout="@layout/fragment_analysis" />
 </navigation>

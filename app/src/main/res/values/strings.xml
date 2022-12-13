@@ -61,5 +61,11 @@
     <string name="first_investment">Make your first investment today</string>
     <string name="invest_today">Invest Today</string>
     <string name="trending_coins">Trending Coins</string>
+    <string name="payment">Payment</string>
+    <string name="send_money">Send money</string>
+    <string name="transfers">Transfers</string>
+    <string name="pre_approved_payment">Pre approved payment</string>
+    <string name="bills">Bills</string>
+    <string name="pending_transactions">Pending transactions</string>
 
 </resources>
