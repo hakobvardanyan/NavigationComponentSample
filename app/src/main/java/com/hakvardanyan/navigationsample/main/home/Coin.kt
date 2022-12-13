@@ -3,6 +3,8 @@ package com.hakvardanyan.navigationsample.main.home
 import androidx.annotation.DrawableRes
 import com.hakvardanyan.navigationsample.R
 
+const val KEY_COIN = "arg.key_coin"
+
 enum class Coin(
     val title: String,
     val shortTitle: String,

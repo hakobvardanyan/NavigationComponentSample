@@ -32,5 +32,14 @@
         android:id="@+id/tradingFragment"
         android:name="com.hakvardanyan.navigationsample.main.home.TradingFragment"
         android:label="TradingFragment"
-        tools:layout="@layout/fragment_trading" />
+        tools:layout="@layout/fragment_trading" >
+        <action
+            android:id="@+id/action_tradingFragment_to_coinDetailFragment"
+            app:destination="@id/coinDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinDetailFragment"
+        android:name="com.hakvardanyan.navigationsample.main.home.CoinDetailFragment"
+        android:label="CoinDetailFragment"
+        tools:layout="@layout/fragment_coin_detail" />
 </navigation>
