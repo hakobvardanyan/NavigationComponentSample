@@ -18,10 +18,6 @@ class TradingFragment : BaseFragment<FragmentTradingBinding>() {
 
     override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentTradingBinding::inflate
 
-    private val mainGraphViewModel: MainGraphViewModel by viewModel(ownerProducer = {
-        requireActivity().findNavController(R.id.app_nav_host_container).getBackStackEntry(R.id.mainFragment)
-    })
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
             coinsRecyclerView.layoutManager = LinearLayoutManager(context)
@@ -32,7 +28,7 @@ class TradingFragment : BaseFragment<FragmentTradingBinding>() {
                 )
             }
             buttonInvest.setOnClickListener {
-                mainGraphViewModel.performRootNavigation(R.id.investContainerFragment)
+                requireActivity().findNavController(R.id.app_nav_host_container).navigate(R.id.investContainerFragment)
             }
         }
     }
