@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    tools:context=".invest.InvestFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Invest Fragment"
+        android:textColor="@color/gray_900"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_navigate_to_invest_child1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_navigate_to_invest_child1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Navigate to Invest Child 1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/primary_500"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
