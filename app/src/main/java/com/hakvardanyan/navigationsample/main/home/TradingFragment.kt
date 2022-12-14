@@ -11,6 +11,7 @@ import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentTradingBinding
+import com.hakvardanyan.navigationsample.ext.findRootNavController
 import com.hakvardanyan.navigationsample.main.MainGraphViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -28,7 +29,7 @@ class TradingFragment : BaseFragment<FragmentTradingBinding>() {
                 )
             }
             buttonInvest.setOnClickListener {
-                requireActivity().findNavController(R.id.app_nav_host_container).navigate(R.id.investContainerFragment)
+                findRootNavController().navigate(R.id.investContainerFragment)
             }
         }
     }

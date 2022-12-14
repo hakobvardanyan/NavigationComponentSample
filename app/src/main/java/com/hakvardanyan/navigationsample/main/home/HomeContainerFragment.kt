@@ -10,12 +10,12 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentHomeContainerBinding
+import com.hakvardanyan.navigationsample.ext.findRootNavController
 import com.hakvardanyan.navigationsample.main.MainGraphViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -26,7 +26,7 @@ class HomeContainerFragment : BaseFragment<FragmentHomeContainerBinding>() {
     override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentHomeContainerBinding::inflate
 
     private val mainGraphViewModel: MainGraphViewModel by viewModel(ownerProducer = {
-        requireActivity().findNavController(R.id.app_nav_host_container).getBackStackEntry(R.id.mainFragment)
+        findRootNavController().getBackStackEntry(R.id.mainFragment)
     })
 
     private val navController by lazy {

@@ -44,8 +44,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     /**
      * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
      *
-     * implement navigation graph that is out of the main fragment
-     *
      * Add FAB or smt in container fragments to prove nested navigation container concept
      */
 
