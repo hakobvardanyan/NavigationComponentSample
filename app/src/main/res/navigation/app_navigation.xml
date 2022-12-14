@@ -13,7 +13,7 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
-            android:id="@+id/action_splashFragment_to_registerFragment"
+            android:id="@+id/action_splashFragment_to_auth_navigation"
             app:destination="@id/auth_navigation"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
@@ -27,6 +27,12 @@
         android:id="@+id/mainFragment"
         android:name="com.hakvardanyan.navigationsample.main.MainFragment"
         android:label="MainFragment"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/investContainerFragment"
+        android:name="com.hakvardanyan.navigationsample.invest.InvestContainerFragment"
+        android:label="InvestContainerFragment"
         tools:layout="@layout/fragment_main" />
 
 </navigation>

@@ -1,5 +1,6 @@
 package com.hakvardanyan.navigationsample.main
 
+import androidx.annotation.IdRes
 import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -21,6 +22,9 @@ class MainGraphViewModel : ViewModel() {
     private val _toolbarTitle = MutableStateFlow(R.string.home)
     val toolbarTitle = _toolbarTitle.asStateFlow()
 
+    private val _rootNavigation = MutableSharedFlow<Int>()
+    val rootNavigation = _rootNavigation.asSharedFlow()
+
     fun submitToolbarBackEvent() {
         viewModelScope.launch {
             _toolbarBackEvent.emit(Unit)
@@ -33,5 +37,11 @@ class MainGraphViewModel : ViewModel() {
 
     fun submitToolbarTitle(@StringRes title: Int) {
         _toolbarTitle.tryEmit(title)
+    }
+
+    fun performRootNavigation(@IdRes destinationId: Int) {
+        viewModelScope.launch {
+            _rootNavigation.emit(destinationId)
+        }
     }
 }

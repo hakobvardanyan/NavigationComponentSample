@@ -80,6 +80,11 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 .onEach { toolbarTitle.text = getString(it) }
                 .launchIn(viewLifecycleOwner.lifecycleScope)
 
+            mainGraphViewModel.rootNavigation
+                .flowWithLifecycle(viewLifecycleOwner.lifecycle)
+                .onEach(findNavController()::navigate)
+                .launchIn(viewLifecycleOwner.lifecycleScope)
+
             addDestinationChangeListener(navController)
             addOnBackPressedCallback(navController)
         }

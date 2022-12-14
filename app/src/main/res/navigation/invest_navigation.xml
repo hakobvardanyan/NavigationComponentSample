@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/invest_navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invest_navigation"
+    app:startDestination="@id/investFragment">
 
+    <fragment
+        android:id="@+id/investFragment"
+        android:name="com.hakvardanyan.navigationsample.invest.InvestFragment"
+        android:label="InvestFragment"
+        tools:layout="@layout/fragment_invest">
+        <action
+            android:id="@+id/action_investFragment_to_investFragmentChild1"
+            app:destination="@id/investFragmentChild1" />
+    </fragment>
+    <fragment
+        android:id="@+id/investFragmentChild1"
+        android:name="com.hakvardanyan.navigationsample.invest.InvestFragmentChild1"
+        android:label="InvestFragmentChild1"
+        tools:layout="@layout/fragment_invest_child1">
+        <action
+            android:id="@+id/action_investFragmentChild1_to_investFragmentChild2"
+            app:destination="@id/investFragmentChild2" />
+    </fragment>
+    <fragment
+        android:id="@+id/investFragmentChild2"
+        android:name="com.hakvardanyan.navigationsample.invest.InvestFragmentChild2"
+        android:label="InvestFragmentChild2"
+        tools:layout="@layout/fragment_invest_child2" />
 </navigation>
