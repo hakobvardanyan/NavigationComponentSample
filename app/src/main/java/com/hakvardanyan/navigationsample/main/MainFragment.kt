@@ -43,10 +43,10 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     /**
      * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
-     * By second time clicking on menu item it must pop to nested start destination
-     * implement Toolbar back button functionality
      *
-     * Add FAB or smt in container fragments to prouve nested navigation container concept
+     * implement navigation graph that is out of the main fragment
+     *
+     * Add FAB or smt in container fragments to prove nested navigation container concept
      */
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
