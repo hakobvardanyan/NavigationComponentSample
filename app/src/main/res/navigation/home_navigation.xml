@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_home_child1">
         <action
             android:id="@+id/action_homeFragmentChild1_to_homeFragmentChild2"
-            app:destination="@id/homeFragmentChild2" />
+            app:destination="@id/homeFragmentChild2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/homeFragmentChild2"
@@ -21,7 +25,11 @@
         tools:layout="@layout/fragment_home_child2">
         <action
             android:id="@+id/action_homeFragmentChild2_to_homeFragmentChild3"
-            app:destination="@id/homeFragmentChild3" />
+            app:destination="@id/homeFragmentChild3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/homeFragmentChild3"
@@ -32,18 +40,26 @@
         android:id="@+id/tradingFragment"
         android:name="com.hakvardanyan.navigationsample.main.home.TradingFragment"
         android:label="TradingFragment"
-        tools:layout="@layout/fragment_trading" >
+        tools:layout="@layout/fragment_trading">
         <action
             android:id="@+id/action_tradingFragment_to_coinDetailFragment"
-            app:destination="@id/coinDetailFragment" />
+            app:destination="@id/coinDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/coinDetailFragment"
         android:name="com.hakvardanyan.navigationsample.main.home.CoinDetailFragment"
         android:label="CoinDetailFragment"
-        tools:layout="@layout/fragment_coin_detail" >
+        tools:layout="@layout/fragment_coin_detail">
         <action
             android:id="@+id/action_coinDetailFragment_to_homeFragmentChild1"
-            app:destination="@id/homeFragmentChild1" />
+            app:destination="@id/homeFragmentChild1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 </navigation>
