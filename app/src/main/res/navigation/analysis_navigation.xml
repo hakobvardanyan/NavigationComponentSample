@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_analysis_child1">
         <action
             android:id="@+id/action_analysisFragmentChild1_to_analysisFragmentChild2"
-            app:destination="@id/analysisFragmentChild2" />
+            app:destination="@id/analysisFragmentChild2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/analysisFragmentChild2"
@@ -21,7 +25,11 @@
         tools:layout="@layout/fragment_analysis_child2">
         <action
             android:id="@+id/action_analysisFragmentChild2_to_analysisFragmentChild3"
-            app:destination="@id/analysisFragmentChild3" />
+            app:destination="@id/analysisFragmentChild3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/analysisFragmentChild3"
@@ -32,9 +40,13 @@
         android:id="@+id/analysisFragment"
         android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragment"
         android:label="AnalysisFragment"
-        tools:layout="@layout/fragment_analysis" >
+        tools:layout="@layout/fragment_analysis">
         <action
             android:id="@+id/action_analysisFragment_to_analysisFragmentChild1"
-            app:destination="@id/analysisFragmentChild1" />
+            app:destination="@id/analysisFragmentChild1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 </navigation>
