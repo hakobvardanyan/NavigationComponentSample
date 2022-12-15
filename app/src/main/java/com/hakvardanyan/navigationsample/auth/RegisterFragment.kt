@@ -1,11 +1,13 @@
 package com.hakvardanyan.navigationsample.auth
 
+import android.content.Context
 import android.os.Bundle
 import android.text.Spannable
 import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.content.edit
 import androidx.core.text.buildSpannedString
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
@@ -22,6 +24,10 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
         binding?.apply {
 
             buttonCreateAccount.setOnClickListener {
+                requireActivity()
+                    .getSharedPreferences("auth", Context.MODE_PRIVATE)
+                    .edit { putBoolean("isAuthenticated", true) }
+
                 findNavController().navigate(R.id.action_registerFragment_to_mainFragment, null, navOptions {
                     anim {
                         enter = R.anim.slide_in_right
