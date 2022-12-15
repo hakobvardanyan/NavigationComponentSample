@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_wallet_child1">
         <action
             android:id="@+id/action_walletFragmentChild1_to_walletFragmentChild2"
-            app:destination="@id/walletFragmentChild2" />
+            app:destination="@id/walletFragmentChild2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/walletFragmentChild2"
@@ -21,7 +25,11 @@
         tools:layout="@layout/fragment_wallet_child2">
         <action
             android:id="@+id/action_walletFragmentChild2_to_walletFragmentChild3"
-            app:destination="@id/walletFragmentChild3" />
+            app:destination="@id/walletFragmentChild3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/walletFragmentChild3"
@@ -32,18 +40,26 @@
         android:id="@+id/walletFragment"
         android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragment"
         android:label="WalletFragment"
-        tools:layout="@layout/fragment_wallet" >
+        tools:layout="@layout/fragment_wallet">
         <action
             android:id="@+id/action_walletFragment_to_cardDetailsFragment"
-            app:destination="@id/cardDetailsFragment" />
+            app:destination="@id/cardDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/cardDetailsFragment"
         android:name="com.hakvardanyan.navigationsample.main.wallet.CardDetailsFragment"
         android:label="CardDetailsFragment"
-        tools:layout="@layout/fragment_card_details" >
+        tools:layout="@layout/fragment_card_details">
         <action
             android:id="@+id/action_cardDetailsFragment_to_walletFragmentChild1"
-            app:destination="@id/walletFragmentChild1" />
+            app:destination="@id/walletFragmentChild1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 </navigation>
