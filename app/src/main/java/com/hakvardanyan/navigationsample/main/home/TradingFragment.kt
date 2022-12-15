@@ -29,7 +29,7 @@ class TradingFragment : BaseFragment<FragmentTradingBinding>() {
                 )
             }
             buttonInvest.setOnClickListener {
-                findRootNavController().navigate(R.id.investContainerFragment)
+                findRootNavController().navigate(R.id.action_to_investContainerFragment)
             }
         }
     }

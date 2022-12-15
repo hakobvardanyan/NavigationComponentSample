@@ -7,6 +7,14 @@
 
     <include app:graph="@navigation/auth_navigation" />
 
+    <action
+        android:id="@+id/action_to_investContainerFragment"
+        app:destination="@id/investContainerFragment"
+        app:enterAnim="@anim/slide_in_up"
+        app:exitAnim="@anim/slide_in_down"
+        app:popEnterAnim="@anim/slide_out_up"
+        app:popExitAnim="@anim/slide_out_down" />
+
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.hakvardanyan.navigationsample.SplashFragment"
@@ -43,5 +51,4 @@
         android:name="com.hakvardanyan.navigationsample.invest.InvestContainerFragment"
         android:label="InvestContainerFragment"
         tools:layout="@layout/fragment_main" />
-
 </navigation>
