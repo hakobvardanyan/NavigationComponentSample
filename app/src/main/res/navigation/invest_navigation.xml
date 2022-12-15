@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_invest">
         <action
             android:id="@+id/action_investFragment_to_investFragmentChild1"
-            app:destination="@id/investFragmentChild1" />
+            app:destination="@id/investFragmentChild1"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/investFragmentChild1"
@@ -21,7 +25,11 @@
         tools:layout="@layout/fragment_invest_child1">
         <action
             android:id="@+id/action_investFragmentChild1_to_investFragmentChild2"
-            app:destination="@id/investFragmentChild2" />
+            app:destination="@id/investFragmentChild2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/investFragmentChild2"
