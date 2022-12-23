@@ -3,29 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@+id/homeContainerFragment">
+    app:startDestination="@+id/home_navigation">
 
-    <fragment
-        android:id="@+id/homeContainerFragment"
-        android:name="com.hakvardanyan.navigationsample.main.home.HomeContainerFragment"
-        android:label="HomeContainerFragment"
-        tools:layout="@layout/fragment_home_container" />
+    <include app:graph="@navigation/home_navigation" />
+    <include app:graph="@navigation/wallet_navigation" />
+    <include app:graph="@navigation/analysis_navigation" />
+    <include app:graph="@navigation/profile_navigation" />
 
-    <fragment
-        android:id="@+id/walletContainerFragment"
-        android:name="com.hakvardanyan.navigationsample.main.wallet.WalletContainerFragment"
-        android:label="WalletContainerFragment"
-        tools:layout="@layout/fragment_wallet_container" />
-
-    <fragment
-        android:id="@+id/analysisContainerFragment"
-        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisContainerFragment"
-        android:label="AnalysisContainerFragment"
-        tools:layout="@layout/fragment_analysis_container" />
-
-    <fragment
-        android:id="@+id/profileContainerFragment"
-        android:name="com.hakvardanyan.navigationsample.main.profile.ProfileContainerFragment"
-        android:label="ProfileContainerFragment"
-        tools:layout="@layout/fragment_profile_container" />
 </navigation>
