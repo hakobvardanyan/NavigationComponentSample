@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.hakvardanyan.navigationsample.main.profile.ProfileFragment"
-        android:label="FragmentProfileChild1"
+        android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_notificationsFragment"
