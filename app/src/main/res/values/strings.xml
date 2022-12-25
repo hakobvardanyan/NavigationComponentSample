@@ -44,7 +44,7 @@
     <string name="analysis_child_1">Analysis Child 1</string>
     <string name="analysis_child_2">Analysis Child 2</string>
     <string name="analysis_child_3">Analysis Child 3</string>
-    <string name="home_child_1">Home Child 1</string>
+    <string name="coin_history">Coin History</string>
     <string name="home_child_2">Home Child 2</string>
     <string name="home_child_3">Home Child 3</string>
     <string name="wallet_child_1">Wallet Child 1</string>
@@ -80,5 +80,6 @@
     <string name="pre_approved_payment">Pre approved payment</string>
     <string name="bills">Bills</string>
     <string name="pending_transactions">Pending transactions</string>
+    <string name="more_information">More Information</string>
 
 </resources>

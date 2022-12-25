@@ -3,6 +3,7 @@ package com.hakvardanyan.navigationsample.main.home
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
@@ -23,7 +24,10 @@ class CoinDetailFragment : BaseFragment<FragmentCoinDetailBinding>() {
             coinChart.setImageResource(coin.chart)
             coinFluctuation.text = coin.fluctuation
             root.setOnClickListener {
-                findNavController().navigate(R.id.action_coinDetailFragment_to_homeFragmentChild1)
+                findNavController().navigate(
+                    R.id.action_coinDetailFragment_to_homeFragmentChild1,
+                    bundleOf(KEY_COIN to coin)
+                )
             }
         }
     }

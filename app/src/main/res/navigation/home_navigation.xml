@@ -6,10 +6,10 @@
     app:startDestination="@id/tradingFragment">
 
     <fragment
-        android:id="@+id/homeFragmentChild1"
-        android:name="com.hakvardanyan.navigationsample.main.home.HomeFragmentChild1"
-        android:label="HomeFragmentChild1"
-        tools:layout="@layout/fragment_home_child1">
+        android:id="@+id/coinHistoryFragment"
+        android:name="com.hakvardanyan.navigationsample.main.home.CoinHistoryFragment"
+        android:label="CoinHistoryFragment"
+        tools:layout="@layout/fragment_coin_history">
         <action
             android:id="@+id/action_homeFragmentChild1_to_homeFragmentChild2"
             app:destination="@id/homeFragmentChild2"
@@ -56,7 +56,7 @@
         tools:layout="@layout/fragment_coin_detail">
         <action
             android:id="@+id/action_coinDetailFragment_to_homeFragmentChild1"
-            app:destination="@id/homeFragmentChild1"
+            app:destination="@id/coinHistoryFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
