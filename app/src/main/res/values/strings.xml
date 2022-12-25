@@ -43,7 +43,7 @@
     <string name="card_details">Card details</string>
     <string name="wallet">Wallet</string>
     <string name="analysis">Analysis</string>
-    <string name="analysis_child_1">Analysis Child 1</string>
+    <string name="weekly_analysis">Weekly Analysis</string>
     <string name="analysis_child_2">Analysis Child 2</string>
     <string name="analysis_child_3">Analysis Child 3</string>
     <string name="coin_history">Coin History</string>
@@ -90,5 +90,7 @@
     <string name="pin_code">Pin code</string>
     <string name="contact_email">Contact email</string>
     <string name="contact_phone">Contact phone</string>
+    <string name="report">Report</string>
+    <string name="weekly_analysis_review_title">November first week review</string>
 
 </resources>

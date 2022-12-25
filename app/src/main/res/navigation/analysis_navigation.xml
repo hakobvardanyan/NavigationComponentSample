@@ -6,10 +6,10 @@
     app:startDestination="@id/analysisFragment">
 
     <fragment
-        android:id="@+id/analysisFragmentChild1"
-        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragmentChild1"
-        android:label="AnalysisFragmentChild1"
-        tools:layout="@layout/fragment_analysis_child1">
+        android:id="@+id/weeklyAnalysisFragment"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.WeeklyAnalysisFragment"
+        android:label="WeeklyAnalysisFragment"
+        tools:layout="@layout/fragment_weekly_analysis">
         <action
             android:id="@+id/action_analysisFragmentChild1_to_analysisFragmentChild2"
             app:destination="@id/analysisFragmentChild2"
@@ -43,7 +43,7 @@
         tools:layout="@layout/fragment_analysis">
         <action
             android:id="@+id/action_analysisFragment_to_analysisFragmentChild1"
-            app:destination="@id/analysisFragmentChild1"
+            app:destination="@id/weeklyAnalysisFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"

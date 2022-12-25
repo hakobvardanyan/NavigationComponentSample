@@ -7,14 +7,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
-import com.hakvardanyan.navigationsample.databinding.FragmentAnalysisChild1Binding
+import com.hakvardanyan.navigationsample.databinding.FragmentWeeklyAnalysisBinding
 
-class AnalysisFragmentChild1 : BaseFragment<FragmentAnalysisChild1Binding>() {
+class WeeklyAnalysisFragment : BaseFragment<FragmentWeeklyAnalysisBinding>() {
 
-    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentAnalysisChild1Binding::inflate
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentWeeklyAnalysisBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding?.buttonNavigateToAnalysisChild2?.setOnClickListener {
+        binding?.buttonReport?.setOnClickListener {
             findNavController().navigate(R.id.action_analysisFragmentChild1_to_analysisFragmentChild2)
         }
     }
