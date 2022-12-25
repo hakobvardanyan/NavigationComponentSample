@@ -7,14 +7,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
-import com.hakvardanyan.navigationsample.databinding.FragmentWalletChild1Binding
+import com.hakvardanyan.navigationsample.databinding.FragmentChangeCardInfoBinding
 
-class WalletFragmentChild1 : BaseFragment<FragmentWalletChild1Binding>() {
+class ChangeCardInfoFragment : BaseFragment<FragmentChangeCardInfoBinding>() {
 
-    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentWalletChild1Binding::inflate
+    override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentChangeCardInfoBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding?.buttonNavigateToWalletChild2?.setOnClickListener {
+        binding?.buttonSave?.setOnClickListener {
             findNavController().navigate(R.id.action_walletFragmentChild1_to_walletFragmentChild2)
         }
     }

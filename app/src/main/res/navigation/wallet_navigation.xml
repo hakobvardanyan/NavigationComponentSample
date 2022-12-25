@@ -6,10 +6,10 @@
     app:startDestination="@id/walletFragment">
 
     <fragment
-        android:id="@+id/walletFragmentChild1"
-        android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragmentChild1"
-        android:label="WalletFragmentChild1"
-        tools:layout="@layout/fragment_wallet_child1">
+        android:id="@+id/changeCardInfoFragment"
+        android:name="com.hakvardanyan.navigationsample.main.wallet.ChangeCardInfoFragment"
+        android:label="ChangeCardInfoFragment"
+        tools:layout="@layout/fragment_change_card_info">
         <action
             android:id="@+id/action_walletFragmentChild1_to_walletFragmentChild2"
             app:destination="@id/walletFragmentChild2"
@@ -56,7 +56,7 @@
         tools:layout="@layout/fragment_card_details">
         <action
             android:id="@+id/action_cardDetailsFragment_to_walletFragmentChild1"
-            app:destination="@id/walletFragmentChild1"
+            app:destination="@id/changeCardInfoFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
