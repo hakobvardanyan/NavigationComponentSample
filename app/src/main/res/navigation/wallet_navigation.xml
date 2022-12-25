@@ -11,31 +11,18 @@
         android:label="ChangeCardInfoFragment"
         tools:layout="@layout/fragment_change_card_info">
         <action
-            android:id="@+id/action_walletFragmentChild1_to_walletFragmentChild2"
-            app:destination="@id/walletFragmentChild2"
+            android:id="@+id/action_changeCardInfoFragment_to_saveSuccessFragment"
+            app:destination="@id/saveSuccessFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/walletFragmentChild2"
-        android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragmentChild2"
-        android:label="WalletFragmentChild2"
-        tools:layout="@layout/fragment_wallet_child2">
-        <action
-            android:id="@+id/action_walletFragmentChild2_to_walletFragmentChild3"
-            app:destination="@id/walletFragmentChild3"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
-    <fragment
-        android:id="@+id/walletFragmentChild3"
-        android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragmentChild3"
-        android:label="WalletFragmentChild3"
-        tools:layout="@layout/fragment_wallet_child3" />
+        android:id="@+id/saveSuccessFragment"
+        android:name="com.hakvardanyan.navigationsample.main.wallet.SaveSuccessFragment"
+        android:label="SaveSuccessFragment"
+        tools:layout="@layout/fragment_save_success" />
     <fragment
         android:id="@+id/walletFragment"
         android:name="com.hakvardanyan.navigationsample.main.wallet.WalletFragment"

@@ -15,7 +15,7 @@ class ChangeCardInfoFragment : BaseFragment<FragmentChangeCardInfoBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.buttonSave?.setOnClickListener {
-            findNavController().navigate(R.id.action_walletFragmentChild1_to_walletFragmentChild2)
+            findNavController().navigate(R.id.action_changeCardInfoFragment_to_saveSuccessFragment)
         }
     }
 }

@@ -71,10 +71,9 @@ class WalletContainerFragment : BaseFragment<FragmentWalletContainerBinding>() {
 
     private fun submitToolbarTitle(destinationId: Int) = when (destinationId) {
         R.id.walletFragment -> R.string.wallet
-        R.id.changeCardInfoFragment -> R.string.change_card_info
-        R.id.walletFragmentChild2 -> R.string.wallet_child_2
-        R.id.walletFragmentChild3 -> R.string.wallet_child_3
+        R.id.saveSuccessFragment -> R.string.success
         R.id.cardDetailsFragment -> R.string.card_details
+        R.id.changeCardInfoFragment -> R.string.change_card_info
         else -> null
     }?.let(mainGraphViewModel::submitToolbarTitle)
 
