@@ -44,7 +44,7 @@
     <string name="wallet">Wallet</string>
     <string name="analysis">Analysis</string>
     <string name="weekly_analysis">Weekly Analysis</string>
-    <string name="analysis_child_2">Analysis Child 2</string>
+    <string name="success">Success</string>
     <string name="analysis_child_3">Analysis Child 3</string>
     <string name="coin_history">Coin History</string>
     <string name="home_child_2">Home Child 2</string>
@@ -94,5 +94,7 @@
     <string name="weekly_analysis_review_title">November first week review</string>
     <string name="weekly_report">Weekly Report</string>
     <string name="submit">Submit</string>
+    <string name="close">Close</string>
+    <string name="analytics_report_has_been_submitted_successfully">Analytics report has been submitted successfully! Thank you!</string>
 
 </resources>

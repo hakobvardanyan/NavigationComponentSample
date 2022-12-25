@@ -12,17 +12,17 @@
         tools:layout="@layout/fragment_weekly_analysis">
         <action
             android:id="@+id/action_analysisFragmentChild1_to_analysisFragmentChild2"
-            app:destination="@id/analysisFragmentChild2"
+            app:destination="@id/successReportFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/analysisFragmentChild2"
-        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragmentChild2"
-        android:label="AnalysisFragmentChild2"
-        tools:layout="@layout/fragment_analysis_child2">
+        android:id="@+id/successReportFragment"
+        android:name="com.hakvardanyan.navigationsample.main.analysis.SuccessReportFragment"
+        android:label="SuccessReportFragment"
+        tools:layout="@layout/fragment_success_report">
         <action
             android:id="@+id/action_analysisFragmentChild2_to_analysisFragmentChild3"
             app:destination="@id/analysisFragmentChild3"

@@ -72,7 +72,7 @@ class AnalysisContainerFragment : BaseFragment<FragmentAnalysisContainerBinding>
     private fun submitToolbarTitle(destinationId: Int) = when (destinationId) {
         R.id.analysisFragment -> R.string.analysis
         R.id.weeklyAnalysisFragment -> R.string.weekly_analysis
-        R.id.analysisFragmentChild2 -> R.string.analysis_child_2
+        R.id.successReportFragment -> R.string.success
         R.id.analysisFragmentChild3 -> R.string.analysis_child_3
         else -> null
     }?.let(mainGraphViewModel::submitToolbarTitle)
