@@ -92,5 +92,6 @@
     <string name="contact_phone">Contact phone</string>
     <string name="report">Report</string>
     <string name="weekly_analysis_review_title">November first week review</string>
+    <string name="weekly_report">Weekly Report</string>
 
 </resources>

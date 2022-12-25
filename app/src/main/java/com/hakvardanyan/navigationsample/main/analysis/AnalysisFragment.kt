@@ -14,7 +14,7 @@ class AnalysisFragment : BaseFragment<FragmentAnalysisBinding>() {
     override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentAnalysisBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding?.pieChart1?.setOnClickListener {
+        binding?.buttonWeeklyReport?.setOnClickListener {
             findNavController().navigate(R.id.action_analysisFragment_to_analysisFragmentChild1)
         }
     }
