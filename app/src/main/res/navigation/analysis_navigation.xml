@@ -11,7 +11,7 @@
         android:label="WeeklyAnalysisFragment"
         tools:layout="@layout/fragment_weekly_analysis">
         <action
-            android:id="@+id/action_analysisFragmentChild1_to_analysisFragmentChild2"
+            android:id="@+id/action_weeklyAnalysisFragment_to_successReportFragment"
             app:destination="@id/successReportFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -22,27 +22,14 @@
         android:id="@+id/successReportFragment"
         android:name="com.hakvardanyan.navigationsample.main.analysis.SuccessReportFragment"
         android:label="SuccessReportFragment"
-        tools:layout="@layout/fragment_success_report">
-        <action
-            android:id="@+id/action_analysisFragmentChild2_to_analysisFragmentChild3"
-            app:destination="@id/analysisFragmentChild3"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
-    <fragment
-        android:id="@+id/analysisFragmentChild3"
-        android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragmentChild3"
-        android:label="AnalysisFragmentChild3"
-        tools:layout="@layout/fragment_analysis_child3" />
+        tools:layout="@layout/fragment_success_report" />
     <fragment
         android:id="@+id/analysisFragment"
         android:name="com.hakvardanyan.navigationsample.main.analysis.AnalysisFragment"
         android:label="AnalysisFragment"
         tools:layout="@layout/fragment_analysis">
         <action
-            android:id="@+id/action_analysisFragment_to_analysisFragmentChild1"
+            android:id="@+id/action_analysisFragment_to_weeklyAnalysisFragment"
             app:destination="@id/weeklyAnalysisFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"

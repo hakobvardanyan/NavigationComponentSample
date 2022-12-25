@@ -73,7 +73,6 @@ class AnalysisContainerFragment : BaseFragment<FragmentAnalysisContainerBinding>
         R.id.analysisFragment -> R.string.analysis
         R.id.weeklyAnalysisFragment -> R.string.weekly_analysis
         R.id.successReportFragment -> R.string.success
-        R.id.analysisFragmentChild3 -> R.string.analysis_child_3
         else -> null
     }?.let(mainGraphViewModel::submitToolbarTitle)
 

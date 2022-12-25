@@ -3,10 +3,10 @@ package com.hakvardanyan.navigationsample.main.analysis
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
-import com.hakvardanyan.navigationsample.R
 import com.hakvardanyan.navigationsample.databinding.FragmentSuccessReportBinding
 
 class SuccessReportFragment : BaseFragment<FragmentSuccessReportBinding>() {
@@ -19,7 +19,9 @@ class SuccessReportFragment : BaseFragment<FragmentSuccessReportBinding>() {
                 animationView.playAnimation()
             }, 700)
             buttonClose.setOnClickListener {
-                findNavController().navigate(R.id.action_analysisFragmentChild2_to_analysisFragmentChild3)
+                findNavController().run {
+                    popBackStack(graph.findStartDestination().id, false)
+                }
             }
         }
     }

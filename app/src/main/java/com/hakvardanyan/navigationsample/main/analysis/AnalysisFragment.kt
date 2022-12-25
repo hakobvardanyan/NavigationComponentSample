@@ -15,7 +15,7 @@ class AnalysisFragment : BaseFragment<FragmentAnalysisBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.buttonWeeklyReport?.setOnClickListener {
-            findNavController().navigate(R.id.action_analysisFragment_to_analysisFragmentChild1)
+            findNavController().navigate(R.id.action_analysisFragment_to_weeklyAnalysisFragment)
         }
     }
 }
