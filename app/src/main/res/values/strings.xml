@@ -81,5 +81,6 @@
     <string name="bills">Bills</string>
     <string name="pending_transactions">Pending transactions</string>
     <string name="more_information">More Information</string>
+    <string name="change_information">Change Information</string>
 
 </resources>

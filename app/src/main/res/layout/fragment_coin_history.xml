@@ -69,8 +69,6 @@
                 android:ellipsize="end"
                 android:text="@string/terms" />
         </ScrollView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.button.MaterialButton

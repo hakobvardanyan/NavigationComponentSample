@@ -14,7 +14,7 @@ class CardDetailsFragment : BaseFragment<FragmentCardDetailsBinding>() {
     override val bindingInitializer: (LayoutInflater) -> ViewBinding = FragmentCardDetailsBinding::inflate
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding?.imageCard?.setOnClickListener {
+        binding?.buttonChangeInfo?.setOnClickListener {
             findNavController().navigate(R.id.action_cardDetailsFragment_to_walletFragmentChild1)
         }
     }
