@@ -68,7 +68,7 @@
             android:layout_gravity="center"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="16dp"
-            android:text="@string/report"
+            android:text="@string/submit"
             android:textAllCaps="false"
             android:textColor="@color/white"
             app:backgroundTint="@color/primary_500"
