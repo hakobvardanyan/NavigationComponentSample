@@ -33,35 +33,29 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     private val iconHomeActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_home_filled) }
     private val iconWalletActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_wallet_filled) }
-    private val iconAnalysisActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_analysis_filled) }
     private val iconProfileActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_profile_filled) }
+    private val iconAnalysisActive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_analysis_filled) }
 
     private val iconHomeInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_home) }
     private val iconWalletInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_wallet) }
-    private val iconAnalysisInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_analysis) }
     private val iconProfileInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_profile) }
-
-    /**
-     * Try to implement this - navController.setOnBackPressedDispatcher(OnBackPressedDispatcher())
-     *
-     * Add FAB or smt in container fragments to prove nested navigation container concept
-     */
+    private val iconAnalysisInactive by lazy { ContextCompat.getDrawable(requireContext(), R.drawable.ic_analysis) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding?.apply {
             val navController = nestedMainNavigationHost.getFragment<NavHostFragment>().navController
 
             homeItem.setOnClickListener {
-                navigateTo(R.id.homeContainerFragment, navController)
+                onBottomMenuItemClick(R.id.homeContainerFragment, navController)
             }
             walletItem.setOnClickListener {
-                navigateTo(R.id.walletContainerFragment, navController)
+                onBottomMenuItemClick(R.id.walletContainerFragment, navController)
             }
             analysisItem.setOnClickListener {
-                navigateTo(R.id.analysisContainerFragment, navController)
+                onBottomMenuItemClick(R.id.analysisContainerFragment, navController)
             }
             profileItem.setOnClickListener {
-                navigateTo(R.id.profileContainerFragment, navController)
+                onBottomMenuItemClick(R.id.profileContainerFragment, navController)
             }
 
             buttonBack.setOnClickListener {
@@ -81,18 +75,24 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             addDestinationChangeListener(navController)
             addOnBackPressedCallback(navController)
         }
-
     }
 
     private fun navigateTo(destinationId: Int, navController: NavController) {
-        val shouldSaveAndRestoreState = navController.currentDestination?.id != destinationId
         navController.navigate(destinationId, null, navOptions {
             launchSingleTop = true
-            restoreState = shouldSaveAndRestoreState
+            restoreState = true
             popUpTo(navController.graph.findStartDestination().id) {
-                saveState = shouldSaveAndRestoreState
+                saveState = true
             }
         })
+    }
+
+    private fun onBottomMenuItemClick(destinationId: Int, navController: NavController) {
+        if (navController.currentDestination?.id == destinationId) {
+            mainGraphViewModel.submitBackToGraphRootEvent()
+        } else {
+            navigateTo(destinationId, navController)
+        }
     }
 
     private fun addOnBackPressedCallback(navController: NavController) {
@@ -122,15 +122,15 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                     binding?.apply {
                         homeItem.setImageDrawable(iconHomeInactive)
                         walletItem.setImageDrawable(iconWalletInactive)
-                        analysisItem.setImageDrawable(iconAnalysisInactive)
                         profileItem.setImageDrawable(iconProfileInactive)
+                        analysisItem.setImageDrawable(iconAnalysisInactive)
 
                         destination.hierarchy.forEach {
                             when (it.id) {
                                 R.id.homeContainerFragment -> homeItem.setImageDrawable(iconHomeActive)
                                 R.id.walletContainerFragment -> walletItem.setImageDrawable(iconWalletActive)
-                                R.id.analysisContainerFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
                                 R.id.profileContainerFragment -> profileItem.setImageDrawable(iconProfileActive)
+                                R.id.analysisContainerFragment -> analysisItem.setImageDrawable(iconAnalysisActive)
                             }
                         }
                     } ?: navController.removeOnDestinationChangedListener(this)

@@ -35,16 +35,22 @@ class AnalysisContainerFragment : BaseFragment<FragmentAnalysisContainerBinding>
 
     private val onBackPressedCallback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            navController.popBackStack(navController.graph.findStartDestination().id, false)
+            navController.popBackStack()
         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, onBackPressedCallback)
         addDestinationChangeListener()
+
         mainGraphViewModel.toolbarBackEvent
             .flowWithLifecycle(viewLifecycleOwner.lifecycle)
             .onEach { navController.popBackStack() }
+            .launchIn(viewLifecycleOwner.lifecycleScope)
+
+        mainGraphViewModel.backToGraphRootEvent
+            .flowWithLifecycle(viewLifecycleOwner.lifecycle)
+            .onEach { navController.popBackStack(navController.graph.findStartDestination().id, false) }
             .launchIn(viewLifecycleOwner.lifecycleScope)
     }
 

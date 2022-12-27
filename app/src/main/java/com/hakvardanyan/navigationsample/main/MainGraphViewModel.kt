@@ -1,6 +1,5 @@
 package com.hakvardanyan.navigationsample.main
 
-import androidx.annotation.IdRes
 import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,6 +15,9 @@ class MainGraphViewModel : ViewModel() {
     private val _toolbarBackEvent = MutableSharedFlow<Unit>()
     val toolbarBackEvent = _toolbarBackEvent.asSharedFlow()
 
+    private val _backToGraphRootEvent = MutableSharedFlow<Unit>()
+    val backToGraphRootEvent = _backToGraphRootEvent.asSharedFlow()
+
     private val _showToolbarBackButton = MutableStateFlow(false)
     val showToolbarBackButton = _showToolbarBackButton.asStateFlow()
 
@@ -25,6 +27,12 @@ class MainGraphViewModel : ViewModel() {
     fun submitToolbarBackEvent() {
         viewModelScope.launch {
             _toolbarBackEvent.emit(Unit)
+        }
+    }
+
+    fun submitBackToGraphRootEvent() {
+        viewModelScope.launch {
+            _backToGraphRootEvent.emit(Unit)
         }
     }
 
