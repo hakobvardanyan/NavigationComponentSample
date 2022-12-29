@@ -77,6 +77,10 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         }
     }
 
+    /**
+     * Check the branch "multiple-back-stack-support-by-xml-actions"
+     * too see the implementation using <action/>
+     */
     private fun navigateTo(destinationId: Int, navController: NavController) {
         navController.navigate(destinationId, null, navOptions {
             launchSingleTop = true
