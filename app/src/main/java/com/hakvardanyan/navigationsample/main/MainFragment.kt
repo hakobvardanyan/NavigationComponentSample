@@ -14,7 +14,6 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.navOptions
 import androidx.viewbinding.ViewBinding
 import com.hakvardanyan.navigationsample.BaseFragment
 import com.hakvardanyan.navigationsample.R
@@ -46,16 +45,16 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             val navController = nestedMainNavigationHost.getFragment<NavHostFragment>().navController
 
             homeItem.setOnClickListener {
-                onBottomMenuItemClick(R.id.homeContainerFragment, navController)
+                onBottomMenuItemClick(R.id.global_action_to_homeContainerFragment, navController)
             }
             walletItem.setOnClickListener {
-                onBottomMenuItemClick(R.id.walletContainerFragment, navController)
+                onBottomMenuItemClick(R.id.global_action_to_walletContainerFragment, navController)
             }
             analysisItem.setOnClickListener {
-                onBottomMenuItemClick(R.id.analysisContainerFragment, navController)
+                onBottomMenuItemClick(R.id.global_action_to_analysisContainerFragment, navController)
             }
             profileItem.setOnClickListener {
-                onBottomMenuItemClick(R.id.profileContainerFragment, navController)
+                onBottomMenuItemClick(R.id.global_action_to_profileContainerFragment, navController)
             }
 
             buttonBack.setOnClickListener {
@@ -77,21 +76,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         }
     }
 
-    private fun navigateTo(destinationId: Int, navController: NavController) {
-        navController.navigate(destinationId, null, navOptions {
-            launchSingleTop = true
-            restoreState = true
-            popUpTo(navController.graph.findStartDestination().id) {
-                saveState = true
-            }
-        })
-    }
-
-    private fun onBottomMenuItemClick(destinationId: Int, navController: NavController) {
+    private fun onBottomMenuItemClick(actionId: Int, navController: NavController) {
+        val destinationId = when(actionId) {
+            R.id.global_action_to_homeContainerFragment -> R.id.homeContainerFragment
+            R.id.global_action_to_walletContainerFragment -> R.id.walletContainerFragment
+            R.id.global_action_to_profileContainerFragment -> R.id.profileContainerFragment
+            R.id.global_action_to_analysisContainerFragment -> R.id.analysisContainerFragment
+            else -> null
+        }
         if (navController.currentDestination?.id == destinationId) {
             mainGraphViewModel.submitBackToGraphRootEvent()
         } else {
-            navigateTo(destinationId, navController)
+            navController.navigate(actionId)
         }
     }
 

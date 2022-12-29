@@ -5,6 +5,34 @@
     android:id="@+id/main_navigation"
     app:startDestination="@+id/homeContainerFragment">
 
+    <action
+        android:id="@+id/global_action_to_homeContainerFragment"
+        app:destination="@+id/homeContainerFragment"
+        app:popUpTo="@+id/homeContainerFragment"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
+
+    <action
+        android:id="@+id/global_action_to_walletContainerFragment"
+        app:destination="@+id/walletContainerFragment"
+        app:popUpTo="@+id/homeContainerFragment"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
+
+    <action
+        android:id="@+id/global_action_to_analysisContainerFragment"
+        app:destination="@+id/analysisContainerFragment"
+        app:popUpTo="@+id/homeContainerFragment"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
+
+    <action
+        android:id="@+id/global_action_to_profileContainerFragment"
+        app:destination="@+id/profileContainerFragment"
+        app:popUpTo="@+id/homeContainerFragment"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
+
     <fragment
         android:id="@+id/homeContainerFragment"
         android:name="com.hakvardanyan.navigationsample.main.home.HomeContainerFragment"
