@@ -1,7 +1,7 @@
 # Jetpack Navigation Component: Manual Implementation of Multiple Back Stacks
 The repository contains multiple back stacks manual implementation for a custom views as well as custom logic for the system back navigation.
 
-<!-- Check detailed information in this **[article](https://medium.com/p/62b33e95795c/edit)**  -->
+Check detailed information in this **[article](https://medium.com/@hakvardanyan/jetpack-navigation-component-manual-implementation-of-multiple-back-stacks-62b33e95795c)**
 
 Navigation scheme for menu in this repository is following:
 
