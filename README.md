@@ -13,3 +13,5 @@ In addition you can find:
 * Fragment transition animations
 * Shared ViewModel in scope of main fragment to for communication with nested flows
 * Splash screen from which app decides where to navigate
+
+You can check **[this](https://github.com/hakobvardanyan/NavigationComponentSample/tree/multiple-back-stack-support-by-xml-actions)** branch for implementation of supporting multiple back stacks using global actions in XML.
